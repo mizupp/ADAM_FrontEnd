@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="/FrontEnd/src/img/logo.png"/>
+    <link rel="stylesheet" href="/FrontEnd/src/css/style.css" />
+    <link rel="stylesheet" href="/FrontEnd/src/css/general.css" />
+    <link rel="stylesheet" href="/FrontEnd/src/css/login.css" />
     <title>ADAM</title>
 </head>
 <body>
@@ -17,6 +20,79 @@
         </div>
     </header>
 
+    <div id="login" class="modal">
+        <form id="login-form" class="modal-conteny animate">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="/FrontEnd/src/img/avatar.png"
+                alt="Avatar" class="avatar">
+            </div>
+            <div class="container">
+                <label for="username">Username:</label><br>
+                <input type="text" placeholder="Enter Your Username" name="username" required><br>
+                
+                <label for="password">Password:</label><br>
+                <input type="password" placeholder="Enter Your Password" name="password" required><br><br>
 
+                <button type="submit" class="loginbtn">LOGIN</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember Me
+                </label>
+            </div>
+            <div class="container">
+                <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
+                
+            </div>
+        </form>
+    </div>
+    <!-- Close modal by clicking outside the content -->
+<script>
+    var modal = document.getElementById('login');
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+ <div id="register" class="modal">
+    <form id="register-form" class="modal-conteny animate">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="/FrontEnd/src/img/avatar.png"
+            alt="Avatar" class="avatar">
+        </div>
+        <div class="container">
+            <label for="username"><b>Username:</b></label>
+            <input type="text" placeholder="Enter Your Username" name="username" required>
+            
+            <label for="password"><b>Password:</b></label>
+            <input type="password" id="password" placeholder="Enter Your Password" name="password" required>
+
+            <label for="confirm_password"><b>Confirm Your Password:</b></label>
+            <input type="password" id="confirm_password" placeholder="Re-Enter Your Password" name="confirm_password" required>
+            <span id ='message'></span>
+
+            <button type="submit" class="registerbtn">REGISTER</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember Me
+            </label>
+        </div>
+        <div class="container">
+            <button type="button" onclick="document.getElementById('register').style.display='none'" class="cancelbtn">Cancel</button>
+        </div>
+        <script type="text/javascript" src="js/login.js"></script>
+    </form>
+</div>
+
+<div id="landing" class="">
+    <section class="section-1">
+        <div class="info">
+            <h1>ADAM</h1>
+            <p>Helping you increase personal productivity through an active day and active mind.</p>
+            <div>
+                <button class="primary-button">Get Started</button>
+            </div>
+        </div>
+        <img src="/FrontEnd/src/img/undraw_Blooming_re_2kc4.png" alt="Main illustration" />
 </body>
 </html>

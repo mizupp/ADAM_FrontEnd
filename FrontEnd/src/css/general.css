@@ -1,0 +1,54 @@
+body {
+    font-family: "arial", sans-serif;
+}
+
+h1,
+button {
+    font-family: "arial", sans-serif;
+    color: hsl(12,16%,22%);
+}
+
+p {
+    color: hsl(12,16%,22%);
+    margin-top: 20px;
+}
+
+button {
+    border: none;
+    border-radius: 3px;
+}
+
+a {
+    color: white;
+}
+
+.primary-button {
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(
+        to right,
+        rgba(13, 126, 9, 0.728),
+        hsla(53, 87%, 59%, 0.744)
+    );
+    color: white;
+    font-weight: bold;
+}
+
+.primary-button:hover {
+    background: linear-gradient(
+        to right,
+        hsl(53, 87%, 59%),
+        rgb(13, 126, 9),
+    );
+}
+
+@media (max-width: 750px) {
+    h1,
+    h2,
+    p {
+        text-align: center;
+    }
+}
