@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../src/img/logo.png"/>
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <link rel="stylesheet" href="../src/css/general.css" />
+    <link rel="stylesheet" href="../src/css/login.css" />
+    <link rel="stylesheet" href="../src/css/road.css" />
+    <link rel="stylesheet" href="../src/css/responsivedisplay.css" />
+    
+    <script defer src="../src/js/logout.js"></script>
+    <!-- <script defer src="../src/js/login.js"></script>
+    <script defer src="../src/js/register.js"></script> -->
+
+    <title>ADAM</title>
+</head>
+<body>
+    <header>
+        <div id="stage">       
+            <div id="road">
+                <svg viewBox="60 100 1440 4000">
+                    <path fill="rgba(219, 218, 218)" fill-opacity="1" d="M0,32L48,80C96,128,192,224,288,224C384,224,480,128,576,90.7C672,53,768,75,864,96C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                  </svg>
+              <div id="stripes"></div>
+            </div>
+        <img src="../src/img/logo.png" alt="logo"/>
+        <div class="header-buttons">
+            <button>ADAM</button>
+            <button onclick="document.getElementById('login').style.display='block'" style="width:auto;">Sign In</button>
+            <button onclick="document.getElementById('register').style.display='block'" style="width:auto;">Register</button>
+            <button onclick="document.getElementById('logout').style.display='none'" style="width:auto;">Logout</button>
+        </div>
+    </header>
+
+
+      </div>
+
+    <div id="login" class="modal">
+        <form action="" id="login-form" class="modal-conteny animate">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="../src/img/avatar.png"
+                alt="Avatar" class="avatar">
+            </div>
+            <div class="container">
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" placeholder="Enter Your Username" name="username" required><br>
+                
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" placeholder="Enter Your Password" name="password" required><br><br>
+
+                <button type="submit" id="submitlogin" class="loginbtn">LOGIN</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember Me
+                </label>
+            </div>
+            <div class="container">
+                <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
+                
+            </div>
+        </form>
+    </div>
+    <!-- Close modal by clicking outside the content -->
+<script>
+    var modal = document.getElementById('login');
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+ <div id="register" class="modal">
+    <form id="register-form" class="modal-conteny animate">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="../src/img/avatar.png"
+            alt="Avatar" class="avatar">
+        </div>
+        <div class="container">
+            <label for="username"><b>Username:</b></label>
+            <input type="text" placeholder="Enter Your Username" name="username" required>
+            
+            <label for="password"><b>Password:</b></label>
+            <input type="password" id="password" placeholder="Enter Your Password" name="password" required>
+
+            <label for="confirm_password"><b>Confirm Your Password:</b></label>
+            <input type="password" id="confirm_password" placeholder="Re-Enter Your Password" name="confirm_password" required>
+            <span id ='message'></span>
+
+            <button type="submit" class="registerbtn">REGISTER</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember Me
+            </label>
+        </div>
+        <div class="container">
+            <button type="button" onclick="document.getElementById('register').style.display='none'" class="cancelbtn">Cancel</button>
+        </div>
+        <script type="text/javascript" src="js/login.js"></script>
+    </form>
+</div>
+
+<div id="landing" class="">
+    <section class="section-1">
+        <div class="info">
+            <img src="../src/img/undraw_Blooming_re_2kc4.png" alt="Main illustration" />
+
+            <h1>ADAM</h1>
+            <p>Helping you increase personal productivity through an active day and active mind.</p>
+            <div>
+                <button class="primary-button">Get Started</button>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,12 +1,10 @@
+const form = document.querySelector("registerForm");
 
-
-const regform = document.getElementById("register-form");
-
-regform.addEventListener("submit", async (e) => {
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const username = document.getElementById("regusername").value;
   const password = document.getElementById("regpassword").value;
-  console.log("RegisterFunctionRuns");
+
   const url = `http://localhost:3000/users/register`;
 
   const options = {
@@ -21,8 +19,8 @@ regform.addEventListener("submit", async (e) => {
   const response = await fetch(url, options);
 
   if (response.status == 201) {
-    window.location.assign("main.html");
+    window.location.assign("login.html");
   } else {
-    alert("Uh oh!");
+    alert("You've fucked it");
   }
 });

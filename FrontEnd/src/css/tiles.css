@@ -1,0 +1,66 @@
+.container{
+  column-count: 3;
+  column-gap: 3%;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
+  justify-content: center;
+  position: absolute;
+  font-weight: 600;
+}
+
+.container .cardText, .container .card {
+  width: 90%;
+  break-inside: avoid; /* this is important!! */
+  padding: 5%;
+  margin-bottom: 5%;
+  border-radius: 10px;
+  display: grid;
+}
+
+.container .card {
+  /* vertical-align: top; */
+  background-color: WHITE;
+  border: 1px solid #b7dff0;
+  box-shadow: 12px 10px 2px #1282b393;
+  font-weight: 300;
+  transition: 0.8s;
+}
+
+.container .cardQuotes {
+    background-color: var(--MaxBlueGreen);
+    border: 1px solid #506872;
+    box-shadow: 12px 10px 2px #50687293;
+    font-weight: 800;
+  }
+
+  .container .cardQuotes button{
+    width: 90%;
+    background-color: white;
+    border: none;
+    break-inside: avoid; /* this is important!! */
+    padding: 5%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    display: grid;
+    box-shadow: 10px 10px 2px #50687293;
+    font-weight: 100;
+    border-radius: none;
+  }
+
+  .container .cardQuotes button:hover{
+    background-color: var(--btnColor);
+    transition: 0.6s;
+  }
+
+@media  (max-width: 1030px) {
+.container {
+      column-count: 2;
+}
+}
+
+@media (max-width: 650px){
+.container {
+      column-count: 1;
+}
+}

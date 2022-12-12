@@ -1,22 +1,43 @@
 body {
     font-family: "arial", sans-serif;
+    /* background: linear-gradient(
+        to right,
+        rgba(241, 220, 59, 0.744),
+        rgba(13, 126, 9, 0.728)
+    ); */
+    background-color: rgb(218, 218, 218);
+
+}
+
+.light-mode{
+    border: none;
+}
+.dark-mode {
+    filter: contrast(200%);
+    filter: grayscale(100%);
+    background-color: rgb(0, 0, 0);
+    /* padding: 0;
+    margin: 0;
+    box-sizing: border-box; */
 }
 
 h1,
 button {
     font-family: "arial", sans-serif;
-    color: hsl(12,16%,22%);
+    color: rgb(40, 40, 40);
+    border: none;
+}
+button:hover{
+    transition: 0.3s;
+    color: rgb(243, 243, 243);
 }
 
+
 p {
-    color: hsl(12,16%,22%);
+    color: #41332f;
     margin-top: 20px;
 }
 
-button {
-    border: none;
-    border-radius: 3px;
-}
 
 a {
     color: white;
@@ -31,7 +52,7 @@ a {
     background: linear-gradient(
         to right,
         rgba(13, 126, 9, 0.728),
-        hsla(53, 87%, 59%, 0.744)
+        rgba(241, 220, 59, 0.744)
     );
     color: white;
     font-weight: bold;
@@ -40,7 +61,7 @@ a {
 .primary-button:hover {
     background: linear-gradient(
         to right,
-        hsl(53, 87%, 59%),
+        rgb(241, 220, 59),
         rgb(13, 126, 9),
     );
 }

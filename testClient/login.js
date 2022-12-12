@@ -1,10 +1,10 @@
-const logform = document.getElementById("login-form");
+const form2 = document.querySelector("loginForm");
 
-logform.addEventListener("submit", async (e) => {
+form2.addEventListener("submit", async (e) => {
   e.preventDefault();
   const username = document.getElementById("logusername").value;
   const password = document.getElementById("logpassword").value;
-  console.log("LoginFunctionRuns");
+
   const url = `http://localhost:3000/users/login`;
 
   const options = {
@@ -23,8 +23,7 @@ logform.addEventListener("submit", async (e) => {
     console.log(data);
     localStorage.setItem("session", data.session);
     window.location.assign(`index.html?account_id=${data.account_id}`);
-    
   } else {
-    alert("Uh oh, it was wrong!");
+    alert("You've fucked it");
   }
 });
