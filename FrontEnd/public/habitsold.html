@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habits</title>
+    <link rel="stylesheet" href="../src/css/general.css" />
+    <link rel="stylesheet" href="../src/css/login.css" />
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <link rel="stylesheet" href="../src/css/calender.css" />
+    <link rel="stylesheet" href="../src/css/habits.css" />
+
+    <link rel="stylesheet" href="../src/css/tiles.css" />
+    <link rel="stylesheet" href="../src/css/road.css" />
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    <header>
+        <div id="stage">       
+            <div id="road">
+                <svg viewBox="60 100 1440 4000">
+                    <path fill="rgba(219, 218, 218)" fill-opacity="1" d="M0,32L48,80C96,128,192,224,288,224C384,224,480,128,576,90.7C672,53,768,75,864,96C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                  </svg>
+              <div id="stripes"></div>
+            </div>
+        <img src="../src/img/logo.png" alt="logo"/>
+        <div class="header-buttons">
+            <button onclick="document.getElementById('login').style.display='block'" style="width:auto;">Sign In</button>
+            <button onclick="document.getElementById('register').style.display='block'" style="width:auto;">Register</button>
+            <button onclick="document.getElementById('logout').style.display='none'" style="width:auto;">Logout</button>
+        </div>
+    </header>
+
+
+   
+
+
+
+    <div class="container" id="cardContainer">
+        <div class="cardText">
+            <div class="cardbody">
+                <section>
+                    <ul class="weekdays">
+                      <li>Mo</li>
+                      <li>Tu</li>
+                      <li>We</li>
+                      <li>Th</li>
+                      <li>Fr</li>
+                      <li>Sa</li>
+                      <li>Su</li>
+                    </ul>
+                    <ul class="days">  
+                      <li>1</li>
+                      <li>2</li>
+                      <li>3</li>
+                      <li>4</li>
+                      <li>5</li>
+                      <li>6</li>
+                      <li>7</li>
+                      <li>8</li>
+                      <li>9</li>
+                      <li><span class="active">10</span></li>
+                      <li>11</li>
+                      <li>12</li>
+                      <li>13</li>
+                      <li>14</li>
+                      <li>15</li>
+                      <li>16</li>
+                      <li>17</li>
+                      <li>18</li>
+                      <li>19</li>
+                      <li>20</li>
+                      <li>21</li>
+                      <li>22</li>
+                      <li>23</li>
+                      <li>24</li>
+                      <li>25</li>
+                      <li>26</li>
+                      <li>27</li>
+                      <li>28</li>
+                      <li>29</li>
+                      <li>30</li>
+                      <li>31</li>
+                    </ul>
+                  </section>
+                <blockquote>
+                    <p>Eat 5 Fruit/Veg Today</p>
+                </blockquote>
+            </div>
+            <div id="cardfooter">
+                <button>Completed</div> 
+        </div> 
+    </div> 
+</div>
+
+
+</body>
+</html>

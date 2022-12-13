@@ -1,117 +1,106 @@
-const API_URL = require('./url');
+const serverPath = `http://localhost:3000`;
 
-async function renderHabits(data) {
-  const feed = document.getElementById('habbit-list');
-  const habits = document.createElement('div');
+const habitButton = document.getElementById("addHabitBtn")
 
+var list1 = [], list2 = [], list3 = [], list4 = [], list5 = [];
 
-  const allHabits = (habitData) => {
-    let format_c_date;
-    if (habitData.streak_complete) {
-      const complete_date = new Date(habitData.streak_complete)
-      format_c_date = formatDate(complete_date)
-    } else {
-      format_c_date = 'Not completed yet.'
-    }
-    const end_date = new Date(habitData.streak_end)
-    let format_e_date = formatDate(end_date)
+var n = 1, x = 0;
 
-    const habit = document.createElement('div');
-    habit.id = habitData.id;
-    habit.className = "single-habit";
-    const name = document.createElement('h3');
-    name.textContent = habitData.name;
-    name.className = "habbit-name";
-    const desc = document.createElement('p');
-    desc.textContent = habitData.desc;
-    desc.className = "habbit-desc";
-    const freq = document.createElement('p');
-    freq.textContent = `Frequency: ${habitData.frequency}`;
-    freq.className = "habbit-freq";
-    const track = document.createElement('p');
-    track.id = `count-${habitData.id}`
-    track.textContent = `Streak: ${habitData.streak_track}`;
-    track.className = "habbit-track";
-    const startDate = document.createElement('p');
-    startDate.textContent = `When you can next complete this habbit: ${format_c_date}`;
-    startDate.className = "habbit-complete-date";
-    const endDate = document.createElement('p');
-    endDate.textContent = `Streak end date: ${format_e_date}`;
-    endDate.className = "habbit-streak-end";
-    endDate.style = 'margin-bottom: 10px;'
-    const checkBoxLabel = document.createElement('label');
-    checkBoxLabel.for=`complete-${habitData.id}`;
-    checkBoxLabel.textContent = 'Mark as complete: '
-    checkBoxLabel.className = "habbit-check-label";
-    const checkBox = document.createElement('input');
-    checkBox.className = "habbit-checkbox";
-
-    const current_date = new Date();
-    const old_date = new Date(habitData.streak_complete)
-    checkBox.type = "checkbox";
-    checkBox.id = `complete-${habitData.id}`;
-    checkBox.name = `complete-${habitData.id}`;
-    if(old_date && old_date > current_date) {
-      checkBox.checked = true;
-      checkBox.disabled = true;
-    } else {
-      checkBox.disabled = false;
-    }
-    console.log(updateHabitClient);
-    console.log(checkBox);
-    checkBox.addEventListener('change', updateHabitClient)
-
-    habit.appendChild(name);
-    habit.appendChild(desc);
-    habit.appendChild(freq);
-    habit.appendChild(track);
-    habit.appendChild(startDate);
-    habit.appendChild(endDate);
-    habit.appendChild(checkBoxLabel);
-    habit.appendChild(checkBox);
-
-    feed.prepend(habit);
-  }
-
-  data.forEach(allHabits);
+function calcProg(goal_freq,cum_freq){
+    let n = (1-((goal_freq-cum_freq)/goal_freq))*100;
+    return n;
 }
+let progVal = 0
+function AddRow(){
 
-async function updateHabitClient(e) {
-    e.target.disable = true;
-    const habit_id = e.target.parentElement.id;
-    try {
-        const options = {
-            method: 'PATCH',
-            headers: new Headers({'Authorization': localStorage.getItem('token')}),
+    var AddRown = document.getElementById('habitTable');
+    var NewRow = AddRown.insertRow(n);
+
+    list1[x] = document.getElementById("habit").value;
+    list2[x] = document.getElementById("frequency").value;
+    list3[x] = document.getElementById("units").value;
+    list4[x] = document.getElementById("time").value;
+    list5[x];
+
+    var cel1 = NewRow.insertCell(0);
+    var cel2 = NewRow.insertCell(1);
+    var cel3 = NewRow.insertCell(2);
+    var cel4 = NewRow.insertCell(3);
+    var cel5 = NewRow.insertCell(4);
+    var cel6 = NewRow.insertCell(5);
+    var cel7 = NewRow.insertCell(6);
+
+    let progFreqId = `freqid${x}`
+    let progRowId = `rowid${x}`
+
+    cel1.innerHTML = list1[x];
+    cel2.innerHTML = list2[x];
+    cel3.innerHTML = list3[x];
+    cel4.innerHTML = list4[x];
+    cel5.innerHTML = `<div id = "progress${x}">
+                      <progress id="progressBar${x}" value="${progVal}" max="100"></progress>
+                      </div>
+                      <span id="progText${x}"></span><br>`
+                    //   <span id="progPercText${x}">${progPercVal}%</span>
+    cel6.innerHTML = `<td><button data-bs-toggle="modal" data-bs-target="#editHabitModal" id = "editBtn">Edit</button></td>
+                      `;
+    cel7.innerHTML = `<tr><button class = "deleteBtn">Delete</button></tr>`
+    cel5.setAttribute('id', progRowId)
+    // let progRow = document.getElementById(`progText0`).innerHTML
+    // let freqG = document.getElementById(`freqid0`)
+    editHabit(frequency.value,x)
+
+    const tableEl = document.querySelector("#habitTable")
+    function onDeleteRow (e) {
+        if (!e.target.classList.contains('deleteBtn')){
+            return;
         }
-        const response = await fetch(`${API_URL}/habits/${habit_id}`, options);
-        const data = await response.json();
-        console.log(data);
-        if (data.err){ throw Error(data.err) }
-        updateStreak(data);
-    } catch (err) {
-        console.warn(err);
+        const btn = e.target;
+        btn.closest("tr").remove();
     }
+    tableEl.addEventListener("click", onDeleteRow);
+    n++; x++;
+} //AddRow function ends
+
+function editHabit(g,x){
+    let editBtn = document.getElementById('editHabitSubmit')
+    editBtn.addEventListener('click', (f) => {
+        f.preventDefault()
+        let q = document.getElementById('editHabitText').value
+        let result = calcProg(g,q)
+        console.log("g :"+ g)
+        console.log("q: " + q)
+        document.getElementById(`progressBar${x}`).value += result
+        let progressText = document.getElementById(`progText${x}`)
+        console.log(`progressBar${x}`)
+        progVal += Math.round(result);
+        if(progVal > 100){
+            result = Math.abs(100-progVal);
+            progressText.innerHTML = `You surpassed your goal by ${result}%`
+            progVal = 100
+            
+        }
+        else{
+            progressText.innerHTML = progVal + "%"
+            console.log("progval: "+progVal)
+            console.log("result: "+result)
+        }
+        
+    })
 }
+habitButton.addEventListener("click",AddRow);
 
-async function updateStreak(data) {
-  let id = localStorage.getItem('id')
-  let count = data.streak_track;
-  let checkedBox = document.getElementById(`complete-${data.id}`);
-  checkedBox.disabled = true;
-  let theCounter = document.getElementById(`count-${data.id}`)
-  theCounter.textContent = `Streak: ${count}`;
-}
+const logoutBtn = document.getElementById('logoutbtn')
+logoutBtn.addEventListener('click', () => {
+    window.location.href = "index.html"
+    localStorage.clear();
+})
 
 
-function formatDate(date) {
-  const monthNames = ["January", "February", "March", "April", "May", "June",
-      "July", "August", "September", "October", "November", "December"];
-  const month = monthNames[date.getMonth()];
-  const day = String(date.getDate()).padStart(2, '0');
-  const year = date.getFullYear();
-  const format_date = month  + '\n'+ day  + ',' + year;
-  return format_date;
-}
+let greeting = document.getElementById('showUsername')
 
-module.exports = {renderHabits, updateStreak};
+
+greeting.innerHTML = `Hello ${localStorage.getItem('username')}!`
+console.log(localStorage.getItem('username')) 
+
+    
