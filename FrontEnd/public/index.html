@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../src/css/responsivedisplay.css" />
     
     <script defer src="../src/js/logout.js"></script>
+    <script defer src="../src/js/avatar.js"></script>
 
     <title>ADAM</title>
 </head>
@@ -24,10 +25,18 @@
                   </svg>
               <div id="stripes"></div>
             </div>
+
+
             <a href="../public/main.html"><img  src="../src/img/logo.png"  alt="logo"/> </a>
         </div>
+      <!-- <div id="headerimg">
+            <img  id="avatar" onload="generateAvatar()"
+            alt="Avatar" class="avatar">
+        </div> -->
         <div class="header-buttons">
+            <img  id="avatar" onload="generateAvatar()" alt="Avatar" class="avatar">
             <button class="light-mode" onclick="darkM()">Dark mode</button>
+
             <button id="logout-btn" onclick="document.getElementById('logout').style.display='none'" style="width:auto;">Logout</button>
         </div>
         <script>

@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="../src/css/responsivedisplay.css" />
     <link rel="stylesheet" href="../src/css/general.css" />
     <link rel="stylesheet" href="../src/css/style.css" />
-    
     <link rel="stylesheet" href="../src/css/lightmode.css" />
 
 
@@ -22,47 +21,47 @@
 <body>
 
     <header>
-        <div id="loader">
+            <!-- <div id="loader">
         <svg id="svgcoolforu" x="0px" y="0px" viewBox="0 0 298 53.9">
           <path class="st0" d="M297.5,41.2h-76.6c-0.5,0-0.9,0.4-1,0.8l-1.6,11.3l-3.1-32c0-0.5-0.4-0.9-0.9-0.9c-0.5,0-0.9,0.3-1,0.8
                                l-5.3,25.5l-2.3-10.9c-0.1-0.4-0.4-0.7-0.9-0.8c-0.4,0-0.8,0.2-1,0.6l-2.3,4.8h-107c0,0,0,0,0,0H82c-1.6,0-2.2,1.1-2.2,1.6
                                l-1.6,11.3l-3.1-52c0-0.5-0.4-0.9-0.9-0.9c-0.5,0-0.9,0.3-1,0.8l-9.3,45.5l-2.3-10.9c-0.1-0.4-0.4-0.7-0.9-0.8c-0.4,0-0.8,0.2-1,0.6
                                l-2.3,4.8H0.5"/>
         </svg>
-        </div> 
+        </div>  -->
         <div id="stage">       
                 <div id="road">
-                    <svg viewBox="0 0 1550 4000">
+                    <!-- <svg viewBox="0 0 1550 4000">
                         <path fill="rgba(219, 218, 218)" fill-opacity="1" d="M0,32L48,80C96,128,192,224,288,224C384,224,480,128,576,90.7C672,53,768,75,864,96C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-                    </svg>
+                    </svg> -->
                     <!-- <svg viewBox="0 30 180 30">
                         <path fill="rgba(219, 218, 218)" fill-opacity="1" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
                     </svg> -->
 
-                <div id="stripes"></div>
+                <!-- <div id="stripes"></div> -->
 
             </div>
-            <a href="../public/index.html"><img id="logoadam"  src="../src/img/logo.png"  alt="logo"/></a>
+            <a href="../public/index.html"><img  src="../src/img/logo.png"  alt="logo"/></a>
             
             <div class="header-buttons">
-                <div>
-                    <input type="checkbox" class="checkbox" id="chk" />
-                    <label class="label" for="chk">
-                        <i class="fas fa-moon"></i>
-                        <i class="fas fa-sun"></i>
-                        <div class="ball"></div>
-                    </label>
-                </div>
                 <button class="light-mode" onclick="darkM()">Dark mode</button>
             </div>   
-
-
+            <div class="tdnn">
+                <div class="moon">
+               </div>
+           </div>
             </div>      
 
         
     </header>
+    <script>
+$('.tdnn').click(function () {
+  $("body").toggleClass('light');
+  $(".moon").toggleClass('sun');
+  $(".tdnn").toggleClass('day');
+});
 
-
+    </script>
     <!-- <div id="loader">
         <svg id="svgcoolforu" x="0px" y="0px" viewBox="0 0 298 53.9">
           <path class="st0" d="M297.5,41.2h-76.6c-0.5,0-0.9,0.4-1,0.8l-1.6,11.3l-3.1-32c0-0.5-0.4-0.9-0.9-0.9c-0.5,0-0.9,0.3-1,0.8
@@ -153,16 +152,12 @@
 <script defer src="../src/js/login.js"></script>
 <script defer src="../src/js/register.js"></script>
 <script defer src="../src/js/avatar.js"></script>
-<script defer src="../src/js/app.js"></script>
-
 <script>
     function darkM() {
        var element = document.body;
        element.classList.toggle("dark-mode");
     }
 </script>
-
-<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
 </body>
 </html>

@@ -15,7 +15,7 @@
   #road {
     opacity:.9;
     width: 120vw;
-    /* width: 120vw; */
+    width: 120vw;
     height: 5vw;
     min-height:150px;
     /* border-radius: 50%/100px 100px 0 0; */

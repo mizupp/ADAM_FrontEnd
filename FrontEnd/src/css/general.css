@@ -1,24 +1,12 @@
 body {
     font-family: "arial", sans-serif;
-    /* background: linear-gradient(
+    background-color: rgb(54, 52, 52);
+/* 
+    background: linear-gradient(
         to right,
         rgba(241, 220, 59, 0.744),
         rgba(13, 126, 9, 0.728)
     ); */
-    background-color: rgb(218, 218, 218);
-
-}
-
-.light-mode{
-    border: none;
-}
-.dark-mode {
-    filter: contrast(200%);
-    filter: grayscale(100%);
-    background-color: rgb(0, 0, 0);
-    /* padding: 0;
-    margin: 0;
-    box-sizing: border-box; */
 }
 
 h1,

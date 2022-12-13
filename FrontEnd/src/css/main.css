@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 1px solid blue;
+}
+
+body{
+    transition: ease-in-out;
+    transition: 0.8s;
+    background-color: rgb(218, 218, 218);
+    overflow: hidden;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+header img {
+    top: 0;
+    left: 0;
+    width: 10%;
+}
+
+.header-buttons {
+    align-self: stretch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 1%;
+    top: 20%;
+    right: 5%;
+    /* position: absolute; */
+    z-index: 1000;
+    
+}
+#logoadam{
+    position: absolute;
+    left: 0;
+}
+#darkbutton{
+    position: absolute;
+    right: 5%;
+    top: 10%;
+}
+/* Header button extra */
+header button {
+    background-color: transparent;
+    width: max-content;
+    flex: 1 0 auto;
+    margin: 0 2%;
+    padding: 1% 8%;
+    font-size: 1.2rem;
+    height: 40px;
+}
+
+header button:hover {
+    font-weight: 600;
+}
+
+
+/* Login in and register button */
+.log-buttons {
+    align-self: stretch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50vh;
+    right: 50vw;
+    flex-direction: column;
+}
+
+.log-buttons button{
+    background-color: transparent;
+    /* width: max-content; */
+    /* flex: 10 10 auto; */
+    margin: 10px 10px;
+    padding: 1% 8%;
+    font-size: 1.2rem;
+    height: 60px;
+    min-width: 300px;
+    border-radius: 30px;
+}
+
+
+@media (max-width: 1250px) {
+    header img {
+        width: 130px;
+    }
+
+    header button {
+        padding: 1px 5px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 500px) {
+    header img {
+        width: 90px;
+    }
+    header button {
+        padding: 1px 5px;
+        font-size: 0.8rem;
+    }
+}
+
+#loader{
+    /* background: rgba(219, 218, 218); */
+      /* background: linear-gradient(
+      to right,
+      rgb(127, 116, 34),
+      rgb(43, 126, 40)
+  ); */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  grid-area: footer;
+  
+}
+
+
+.svgcoolforu {
+    /* height: 10%; */
+    /* width: 100%; */
+    /* bottom: 0; */
+  }
+
+
+
+.st0{
+    stroke: rgb(255, 255, 255);
+    stroke-width: 1px;
+    fill: none;
+    stroke-dasharray: 150, 200;
+    stroke-dashoffset: 0;
+    animation: pulse 4s infinite linear;
+    
+}
+
+@keyframes pulse {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 1050;
+  }
+}

@@ -1,6 +1,6 @@
 #stage {
-  margin: 0;
-  top: 0;
+    margin: 0;
+    top: 0;
     overflow: hidden;
     position:relative;
     perspective: 300px;
@@ -23,14 +23,14 @@
     background: rgb(0, 62, 34);
     background: linear-gradient(#145e0ab1, #c5c505b2);
     
-    /* background-image: linear-gradient(
+    background-image: linear-gradient(
       rgba(0, 51, 7, 0.7) 0%,
       rgba(51, 92, 4, 0.8)5%,
       rgba(0, 95, 8, 0.2) 50%,
       rgba(0, 91, 8, 0.4) 70%,
       rgba(0, 121, 10, 0.5) 87%,
       rgba(255, 234, 0, 0.495) 100%
-    ),    url("../img/download.gif"); */
+    ),    url("../img/download.gif");
     /* background-image: linear-gradient(
         rgba(201, 225, 204, 0.7) 0%,
         rgba(1, 43, 4, 0.8)5%,
@@ -67,42 +67,4 @@
     );
   }
 
-  #loader{
-      /* background: rgba(219, 218, 218); */
-        /* background: linear-gradient(
-        to right,
-        rgb(127, 116, 34),
-        rgb(43, 126, 40)
-    ); */
-    position: fixed;
-    top: 50%;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-  }
-  
-  .svgcoolforu {
-      height: 100%;
-      width: 100%;
-      
-    }
-    .st0{
-      stroke: rgb(255, 255, 255);
-      stroke-width: 1px;
-      fill: none;
-      stroke-dasharray: 150, 200;
-      stroke-dashoffset: 0;
-      animation: pulse 4s infinite linear;
-      
-    }
-  
-  @keyframes pulse {
-    0% {
-      stroke-dashoffset: 0;
-    }
-    100% {
-      stroke-dashoffset: 1050;
-    }
-  }
+
