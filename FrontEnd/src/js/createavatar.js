@@ -22,5 +22,13 @@ return canvas.toDataURL("image/png");
 }
 
 //this is not running (not in any function)
+document.getElementById("avatar").src = generateAvatar("test", "white", "#009578");
 
-document.getElementById("avatar").src = generateAvatar("user", "white", "#009578");
+// document.addEventListener("DOMContentLoaded", async (e) => { 
+//     e.preventDefault();
+//     const response = await fetch(`${API_URL}/users/${account_id}`, options);
+//     console.log(data)
+// });
+
+
+
