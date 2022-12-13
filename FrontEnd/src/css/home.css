@@ -1,0 +1,347 @@
+
+/* Colour theme 1 */
+/* :root {
+    --oceanblue: #5465ff;
+    --mauveblue: #788BFF;
+    --skyblue: #9BB1FF;
+    --lightblue: #BFD7FF;
+    --clearblue: #eaf4f5;
+    --shadow: #b4caf0;
+} */
+
+/* Colour theme 2 */
+/* :root {
+    --oceanblue: #034732;
+    --mauveblue:#004346;
+    --skyblue: #8BBD8B ;
+    --lightblue: #6CA375;
+    --clearblue: #A9CEF4;
+} */
+
+
+:root {
+    --oceanblue: #503D3F;
+    --mauveblue: #7FB069;
+    --skyblue: #2F4B26 ;
+    --lightblue: #BBACC1;
+    --clearblue: #FFFFFF;
+    --lightcyan: #CFFCFF
+}
+
+
+
+*, 
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+html {
+    font-size:  60%;
+    transition: font-size 0.3s;
+}
+
+body {
+    font-family: sans-serif;
+    /* overflow: hidden; */
+    width: 100%;
+}
+
+body * {
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.main {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--clearblue);
+}
+
+/* -- HEADER --*/
+
+
+
+
+
+
+
+
+
+
+
+
+/* RIGHT */
+
+.liScreen {
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    top: 20%;
+    right: 0;
+    width: calc(100% - 25rem);
+    height: 100%;
+    background-color: transparent;
+    color: var(--mauveblue);
+    /* display: none; */
+}
+
+.liScreenContainer {
+    width: 100%;
+    height: 100%;
+    padding: 5rem;
+    position: relative;
+}
+
+/* RIGHT */
+
+/* UPPER-TEXT */
+
+.upperText {
+    position: absolute;
+    bottom: 85vh;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.h1 {
+    font-weight: 300;
+    font-size: 4vh;
+    color: var(--oceanblue);
+}
+
+/* UPPER-TEXT */
+
+
+/* CATAGORIES */
+
+.catagories {
+    width: calc(100% - 10rem);
+    position: absolute;
+    left: 350px;
+    bottom: calc(36vh + 6rem);
+}
+
+
+.catagoryText {
+    font-weight: 600;
+    font-size: 3rem;
+    color: var(--oceanblue);
+}
+
+.catagoriesContainer {
+    padding-top: 2rem;
+    width: 100%;
+    height: auto;
+    white-space: nowrap;
+    /* overflow-x: scroll; */
+}
+
+/* REMOVED THE SCROLL BAR */
+/* .catagoriesContainer::-webkit-scrollbar {
+    background-color: var(--lightblue);
+    height: 10px;
+}
+
+.catagoriesContainer::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--oceanblue);
+    transition: all 0.3s;
+} */
+
+.catagory {
+    display:  inline-block;
+    padding: 3.5vh 3rem;
+    border-radius: 3vh;
+    width: 25rem;
+    height: 30vh;
+    background-color:var(--mauveblue);
+    margin-right: 2rem;
+    position: relative;
+    margin-bottom: 1vh;
+  
+}
+
+.catagoriesContainer:hover .catagory {
+    translate: -1vh;
+}
+
+.title {
+    letter-spacing: -2px;
+    font-weight: 500;
+    font-size: 2.4rem;
+    position: absolute;
+    bottom: 35%;
+    font-weight: bold;
+    color: var(--oceanblue);
+}
+
+.content {
+    color: var(--oceanblue);
+    letter-spacing: -1px;
+    font-weight: 500;
+    font-size: 1.8rem;
+    position: absolute;
+    bottom: calc(35% - 2.5rem);
+}
+
+.icon {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    background-color: var(--mauveblue);
+    position: absolute;
+}
+
+.icon img {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: invert(20%) sepia(7%) saturate(1849%) hue-rotate(305deg) brightness(96%) contrast(80%);
+} 
+
+/* CATAGORIES */
+
+
+/* CALENDER/GRAPH */
+
+.graphContainer {
+    width: calc(100% - 10rem);
+    height: 36vh;
+    position: absolute;
+    bottom: -30rem;
+    left: -4rem;
+}
+
+.numbers > {
+    display: block;
+}
+
+.numbers * {
+    font-weight: 400;
+}
+
+.numbers {
+    color: var(--mauveblue);
+    width: 5rem;
+    height: 100%;
+    position: relative;
+    margin-left: -15px;
+}
+
+.per100 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.per50 {
+    position: absolute;
+    top: calc(50% - 1rem);
+    transform: translateY(calc(-50% - 1rem));
+    left: 0;
+}
+
+.per0 {
+    position: absolute;
+    bottom: 5rem;
+    left: 0;
+}
+
+.graph {
+    background-color: var(--mauveblue);
+    border-radius: 10px;
+    width: calc(100% - 4rem);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 2rem ;
+}
+
+.graph > :not(:last-child) {
+    margin-right: 1.2rem;
+}
+
+.graphBar {
+    display: inline-block;
+    width: calc(((100% - 2rem) / 7) - 1rem);
+    height: 100%;
+    background-color: transparent;
+    position: relative;
+}
+
+.date {
+    background-color: var(--clearblue);
+    border-radius: 6px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    position: absolute;
+    bottom: 1rem;
+    width: 90%;
+    padding: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.graph1 {
+    width: 20%;
+    height: calc(100% - 7rem);
+    background-color: var(--lightcyan);
+    position: absolute;
+    border-radius: 5px;
+    left: 25%;
+    top: 1rem;
+}
+
+.graph2 {
+    width: 20%;
+    height: calc(100% - 7rem);
+    background-color: var(--lightcyan);
+    position: absolute;
+    border-radius: 5px;
+    right: 25%;
+    top: 1rem;
+}
+
+.graph1::after,
+.graph2::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--oceanblue);
+    height: var(--myHeight);
+    border-radius: 5px;
+}
+
+.graphHeight {
+    background-color: var(--clearblue);
+    border-radius: 6px;
+    text-align: center;
+    font-size: 1.4rem;
+    position: absolute;
+    bottom: 1rem;
+    width: 90%;
+    padding: 1rem 0;
+    left: 5%;
+    z-index: 100;
+    transition: translateX(-50%);
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    font-weight: 600;
+}
+
+.graph1:hover * .graphHeight,
+.graph1:hover * .graphHeight {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.2);
+}
+
+
+/* CALENDER */
