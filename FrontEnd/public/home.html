@@ -3,136 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+    <meta name="viewport" content="width=, initial-scale=1.0">
     <title>ADAM</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../src/css/home.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-        <section class="main">
-            <header class="header">
-                <!-- <div class="top-list">
-                    <ul>
-                        <li>
-                            <input type="radio" class="radioClass radioHome" name="headerbtn">
-                            <div class="svg-bg"></div>
-                            <svg class="svgimg" xmlns="http://www.w3.org/2000/svg" height="15%" width="40%">
-                                <path d="M11 39h7.5V26.5h11V39H37V19.5L24 9.75 11 19.5Zm-3 3V18L24 6l16 12v24H26.5V29.5h-5V42Zm16-17.65Z"/>
-                            </svg>
-                            <P>Home</P>
-                        </li>
-                        <li>
-                            <input type="radio" class="radioClass radioHabits" name="headerbtn">
-                            <div class="svg-bg"></div>
-                            <svg class="svgimg" xmlns="http://www.w3.org/2000/svg" height="15%" width="40%"><path d="M22.5 38V25.5H10v-3h12.5V10h3v12.5H38v3H25.5V38Z"/></svg>
-                            <P>Add habits</P>
-                        </li>
-                        <li>
-                            <input type="radio" class="radioClass" name="headerbtn">
-                            <div class="svg-bg"></div>
-                            <svg class="svgimg" xmlns="http://www.w3.org/2000/svg" height="15%" width="40%">
-                                <path d="M9 44q-1.2 0-2.1-.9Q6 42.2 6 41V10q0-1.2.9-2.1Q7.8 7 9 7h3.25V4h3.25v3h17V4h3.25v3H39q1.2 0 2.1.9.9.9.9 2.1v31q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V19.5H9V41Zm0-24.5h30V10H9Zm0 0V10v6.5ZM24 28q-.85 0-1.425-.575Q22 26.85 22 26q0-.85.575-1.425Q23.15 24 24 24q.85 0 1.425.575Q26 25.15 26 26q0 .85-.575 1.425Q24.85 28 24 28Zm-8 0q-.85 0-1.425-.575Q14 26.85 14 26q0-.85.575-1.425Q15.15 24 16 24q.85 0 1.425.575Q18 25.15 18 26q0 .85-.575 1.425Q16.85 28 16 28Zm16 0q-.85 0-1.425-.575Q30 26.85 30 26q0-.85.575-1.425Q31.15 24 32 24q.85 0 1.425.575Q34 25.15 34 26q0 .85-.575 1.425Q32.85 28 32 28Zm-8 8q-.85 0-1.425-.575Q22 34.85 22 34q0-.85.575-1.425Q23.15 32 24 32q.85 0 1.425.575Q26 33.15 26 34q0 .85-.575 1.425Q24.85 36 24 36Zm-8 0q-.85 0-1.425-.575Q14 34.85 14 34q0-.85.575-1.425Q15.15 32 16 32q.85 0 1.425.575Q18 33.15 18 34q0 .85-.575 1.425Q16.85 36 16 36Zm16 0q-.85 0-1.425-.575Q30 34.85 30 34q0-.85.575-1.425Q31.15 32 32 32q.85 0 1.425.575Q34 33.15 34 34q0 .85-.575 1.425Q32.85 36 32 36Z"/>
-                            </svg>
-                            <p>Calendar</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bottom-list">
-                    <ul>
-                        <li>
-                            <input type="radio" class="radioClass radioLogout" name="headerbtn">
-                            <div class="svg-bg"></div>
-                            <svg class="svgimg" xmlns="http://www.w3.org/2000/svg" height="15%" width="40%">
-                                <path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h14.55v3H9v30h14.55v3Zm24.3-9.25-2.15-2.15 5.1-5.1h-17.5v-3h17.4l-5.1-5.1 2.15-2.15 8.8 8.8Z"/>
-                            </svg>
-                            <P>Logout</P>
-                        </li>
-                    </ul>
-                </div> -->
+
+<!-- Navigation header -->
+     <nav>
+        <div class="top-list">
+            <div class="nav-icon-container">
+                <a href="home.html">
+                    <svg class="svgimg" xmlns="http://www.w3.org/2000/svg" height="15%" width="15%">
+                        <path d="M11 39h7.5V26.5h11V39H37V19.5L24 9.75 11 19.5Zm-3 3V18L24 6l16 12v24H26.5V29.5h-5V42Zm16-17.65Z"/>
+                    </svg>
+                    <p>Home</p>
+                </a>
+            </div>
+            <div class="nav-icon-container">
+                <a href="habits.html">
+                    <svg class="svgimg" xmlns="http://www.w3.org/2000/svg" height="15%" width="15%">
+                        <path d="M22.5 38V25.5H10v-3h12.5V10h3v12.5H38v3H25.5V38Z"/>
+                    </svg>
+                    <p>Add habit</p>
+                </a>
+            </div>
+            <div class="nav-icon-container">
+                <a href="#">
+                    <svg class="svgimg" xmlns="http://www.w3.org/2000/svg" height="15%" width="15">
+                        <path d="M9 44q-1.2 0-2.1-.9Q6 42.2 6 41V10q0-1.2.9-2.1Q7.8 7 9 7h3.25V4h3.25v3h17V4h3.25v3H39q1.2 0 2.1.9.9.9.9 2.1v31q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V19.5H9V41Zm0-24.5h30V10H9Zm0 0V10v6.5ZM24 28q-.85 0-1.425-.575Q22 26.85 22 26q0-.85.575-1.425Q23.15 24 24 24q.85 0 1.425.575Q26 25.15 26 26q0 .85-.575 1.425Q24.85 28 24 28Zm-8 0q-.85 0-1.425-.575Q14 26.85 14 26q0-.85.575-1.425Q15.15 24 16 24q.85 0 1.425.575Q18 25.15 18 26q0 .85-.575 1.425Q16.85 28 16 28Zm16 0q-.85 0-1.425-.575Q30 26.85 30 26q0-.85.575-1.425Q31.15 24 32 24q.85 0 1.425.575Q34 25.15 34 26q0 .85-.575 1.425Q32.85 28 32 28Zm-8 8q-.85 0-1.425-.575Q22 34.85 22 34q0-.85.575-1.425Q23.15 32 24 32q.85 0 1.425.575Q26 33.15 26 34q0 .85-.575 1.425Q24.85 36 24 36Zm-8 0q-.85 0-1.425-.575Q14 34.85 14 34q0-.85.575-1.425Q15.15 32 16 32q.85 0 1.425.575Q18 33.15 18 34q0 .85-.575 1.425Q16.85 36 16 36Zm16 0q-.85 0-1.425-.575Q30 34.85 30 34q0-.85.575-1.425Q31.15 32 32 32q.85 0 1.425.575Q34 33.15 34 34q0 .85-.575 1.425Q32.85 36 32 36Z"/>
+                    </svg>
+                    <p>Calendar</p>
+                </a>
+            </div>
+        </div>
+        <div class="bottom-list">
+            <div class="nav-icon-container">
+                <a href="index.html">
+                    <svg class="svgimg" xmlns="http://www.w3.org/2000/svg" height="15%" width="15%">
+                        <path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h14.55v3H9v30h14.55v3Zm24.3-9.25-2.15-2.15 5.1-5.1h-17.5v-3h17.4l-5.1-5.1 2.15-2.15 8.8 8.8Z"/>
+                    </svg>
+                    <p>Logout</p>
+                </a>
+            </div>
+            <div class="nav-icon-container">
+                <a href="settings.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="15%" width="15%">
+                        <path d="m19.4 44-1-6.3q-.95-.35-2-.95t-1.85-1.25l-5.9 2.7L4 30l5.4-3.95q-.1-.45-.125-1.025Q9.25 24.45 9.25 24q0-.45.025-1.025T9.4 21.95L4 18l4.65-8.2 5.9 2.7q.8-.65 1.85-1.25t2-.9l1-6.35h9.2l1 6.3q.95.35 2.025.925Q32.7 11.8 33.45 12.5l5.9-2.7L44 18l-5.4 3.85q.1.5.125 1.075.025.575.025 1.075t-.025 1.05q-.025.55-.125 1.05L44 30l-4.65 8.2-5.9-2.7q-.8.65-1.825 1.275-1.025.625-2.025.925l-1 6.3ZM24 30.5q2.7 0 4.6-1.9 1.9-1.9 1.9-4.6 0-2.7-1.9-4.6-1.9-1.9-4.6-1.9-2.7 0-4.6 1.9-1.9 1.9-1.9 4.6 0 2.7 1.9 4.6 1.9 1.9 4.6 1.9Zm0-3q-1.45 0-2.475-1.025Q20.5 25.45 20.5 24q0-1.45 1.025-2.475Q22.55 20.5 24 20.5q1.45 0 2.475 1.025Q27.5 22.55 27.5 24q0 1.45-1.025 2.475Q25.45 27.5 24 27.5Zm0-3.5Zm-2.2 17h4.4l.7-5.6q1.65-.4 3.125-1.25T32.7 32.1l5.3 2.3 2-3.6-4.7-3.45q.2-.85.325-1.675.125-.825.125-1.675 0-.85-.1-1.675-.1-.825-.35-1.675L40 17.2l-2-3.6-5.3 2.3q-1.15-1.3-2.6-2.175-1.45-.875-3.2-1.125L26.2 7h-4.4l-.7 5.6q-1.7.35-3.175 1.2-1.475.85-2.625 2.1L10 13.6l-2 3.6 4.7 3.45q-.2.85-.325 1.675-.125.825-.125 1.675 0 .85.125 1.675.125.825.325 1.675L8 30.8l2 3.6 5.3-2.3q1.2 1.2 2.675 2.05Q19.45 35 21.1 35.4Z"/>
+                    </svg>
+                    <p>Settings</p>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+<!-- Welcome banner -->
+
+    <div class="welcomeContainer">
+        <div class="welcomeText">
+            <span class="h1">Welcome
+                <span class="insertName">Polly</span>
+            </span>
+        </div>
+    </div>
 
 
+<!-- Habit cards
+Should I just make one habit card for the layout and then create multiple in the js? -->
+<main>
+    <div class="habits">
+        <div class="habitsText">Habits</div>
+        <div class="habitsContainer">
 
-
-
-
-                <nav>
-                      <div class="nav-icon-container">
-                            <svg class="svgimg" xmlns="http://www.w3.org/2000/svg" height="15%" width="15%">
-                                <path d="M11 39h7.5V26.5h11V39H37V19.5L24 9.75 11 19.5Zm-3 3V18L24 6l16 12v24H26.5V29.5h-5V42Zm16-17.65Z"/>
-                            </svg>
-                            <p>Home</p>
-                      </div>
-                      <div class="nav-icon-container">
-                            <svg class="svgimg" xmlns="http://www.w3.org/2000/svg" height="15%" width="15%">
-                                <path d="M22.5 38V25.5H10v-3h12.5V10h3v12.5H38v3H25.5V38Z"/>
-                            </svg>
-                            <p>Add habit</p>
-                      </div>
-                      <div class="nav-icon-container">
-                            <svg class="svgimg" xmlns="http://www.w3.org/2000/svg" height="15%" width="15">
-                                <path d="M9 44q-1.2 0-2.1-.9Q6 42.2 6 41V10q0-1.2.9-2.1Q7.8 7 9 7h3.25V4h3.25v3h17V4h3.25v3H39q1.2 0 2.1.9.9.9.9 2.1v31q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V19.5H9V41Zm0-24.5h30V10H9Zm0 0V10v6.5ZM24 28q-.85 0-1.425-.575Q22 26.85 22 26q0-.85.575-1.425Q23.15 24 24 24q.85 0 1.425.575Q26 25.15 26 26q0 .85-.575 1.425Q24.85 28 24 28Zm-8 0q-.85 0-1.425-.575Q14 26.85 14 26q0-.85.575-1.425Q15.15 24 16 24q.85 0 1.425.575Q18 25.15 18 26q0 .85-.575 1.425Q16.85 28 16 28Zm16 0q-.85 0-1.425-.575Q30 26.85 30 26q0-.85.575-1.425Q31.15 24 32 24q.85 0 1.425.575Q34 25.15 34 26q0 .85-.575 1.425Q32.85 28 32 28Zm-8 8q-.85 0-1.425-.575Q22 34.85 22 34q0-.85.575-1.425Q23.15 32 24 32q.85 0 1.425.575Q26 33.15 26 34q0 .85-.575 1.425Q24.85 36 24 36Zm-8 0q-.85 0-1.425-.575Q14 34.85 14 34q0-.85.575-1.425Q15.15 32 16 32q.85 0 1.425.575Q18 33.15 18 34q0 .85-.575 1.425Q16.85 36 16 36Zm16 0q-.85 0-1.425-.575Q30 34.85 30 34q0-.85.575-1.425Q31.15 32 32 32q.85 0 1.425.575Q34 33.15 34 34q0 .85-.575 1.425Q32.85 36 32 36Z"/>
-                            </svg>
-                            <p>Calendar</p>
-                      </div>
-                      <div class="bottom-list">
-                        <div class="nav-icon-container">
-                                <svg class="svgimg" xmlns="http://www.w3.org/2000/svg" height="15%" width="15%">
-                                    <path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h14.55v3H9v30h14.55v3Zm24.3-9.25-2.15-2.15 5.1-5.1h-17.5v-3h17.4l-5.1-5.1 2.15-2.15 8.8 8.8Z"/>
-                                </svg>
-                                <p>Logout</p>
-                            </div>
-                        </div>
-                    </nav>
-             
-
-
-                <div class="liScreen">
-                    <div class="liScreenContainer">
-                        <div class="upperText">
-                            <h1 class="h1">Welcome *name*...</h1>
-                        </div>
-                    </div>
-                </div>
-            </header>
-        </section>
-
-        
-        <div class="catagories">
-            <div class="catagoryText">Habits</div>
-            <div class="catagoriesContainer">
-
-                <div class="catagory">
+                <div class="habit">
                     <div class="icon">
-                        <img src="./Icons/bedtime.svg" alt="Bedtime icon">
+                        <img src="../src/img/bedtime.svg" alt="Bedtime icon">
                     </div>
-                    <h1 class="title">SLEEP</h1>
-                    <h1 class="content">7-9 hours per night</h1>
+                    <h1 class="title" id="title1">Sleep</h1>
+                    <h1 class="content" id="content1">7-9 hours per night</h1>
                 </div>
 
-                <div class="catagory">
+                <div class="habit">
                     <div class="icon">
-                        <img src="./Icons/water.svg" alt="Water icon">
+                        <img src="../src/img/water.svg" alt="Water icon">
                     </div>
-                    <h1 class="title">WATER</h1>
-                    <h1 class="content">8 glasses per day</h1>
+                    <h1 class="title" id="title2">Water</h1>
+                    <h1 class="content" id="content2">8 glasses of water per day</h1>
                 </div>
 
-                <div class="catagory">
+                <div class="habit">
                     <div class="icon">
-                        <img src="./Icons/food.svg" alt="Food icon">
+                        <img src="../src/img/food.svg" alt="Food icon">
                     </div>
-                    <h1 class="title">FOOD</h1>
-                    <h1 class="content">5 fruit and veg per day</h1>
+                    <h1 class="title" id="title3">Food</h1>
+                    <h1 class="content" id="content3">5 fruit and veg per day</h1>
                 </div>
-<!-- 
-                <div class="catagory">
+
+                <div class="habit">
                     <div class="icon">
-                        <img src="./Icons/fitness.svg" alt="Fitness icon">
+                        <img src="../src/img/fitness.svg" alt="Fitness icon">
                     </div>
-                    <h1 class="title">TEXT EXAMPLE</h1>
-                    <h1 class="content">Fitness</h1>
-                </div> -->
+                    <h1 class="title">Fitness</h1>
+                    <h1 class="content">30 minutes of exercise per day</h1>
+                </div>
+
+                <div class="habit">
+                    <div class="icon">
+                        <img src="../src/img/meditate.svg" alt="Food icon">
+                    </div>
+                    <h1 class="title">Meditate</h1>
+                    <h1 class="content">30 minutes of meditation per day</h1>
+                </div>
+
             </div>
 
             <div class="graphContainer">
@@ -196,10 +179,7 @@
                 </div>
                 
                 </div>
-            </div>
-
-        </div>
-            
+    </main> 
             
         
 </body>
