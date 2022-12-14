@@ -14,13 +14,15 @@
 
     <!-- js scripts -->
     <script defer src="../src/js/importhabits.js"></script>
-    <script defer src="../src/js/newdashboard.js"></script>
+    <!-- <script defer src="../src/js/newdashboard.js"></script> -->
     <script defer src="../src/js/lightmode.js"></script>
     <script defer src="../src/js/logout.js"></script>
+    <script defer src="../src/js/createhabit.js"></script>
     <!-- note: removed avatar -->
     <!-- <script defer src="../src/js/avatar.js"></script> -->
     <script defer src="../src/js/todo.js"></script>
-
+    <script defer src="../src/js/logoDirectory.js"></script>
+  
     <script defer src="../src/js/hello.js"></script>
 
     <!-- external sheets -->
@@ -35,7 +37,7 @@
 
       <div class="menu">
         <div class="avatar">
-            <div id="putcircle"><a href="../public/main.html"><img class="thumb2" src="../src/img/logo.png" width="50" alt="logo"/></a></div>
+            <div id="putcircle"><img id="logoadam" class="thumb2" src="../src/img/logo.png" width="50" alt="logo"/></div>
             <!-- change src to session stored data url -->
         </div>
         <div class="avatar">
@@ -52,15 +54,15 @@
 
         <!-- links -->
         <nav class="primary">
-          <a href="newdashboard.html" class="menu-item active">
+          <a id="newdashboard-link" class="menu-item active">
             <span class="iconoir-report-columns"></span>
             <span class="desc">Dashboard</span>
           </a>
-          <a href="habitstat.html" class="menu-item ">
+          <a id="habit-stat-link" class="menu-item ">
             <span class="iconoir-google-docs"></span>
             <span class="desc">Habit Stats</span>
           </a>
-          <a href="settings.html" class="menu-item">
+          <a id="setting-link" class="menu-item">
             <span class="iconoir-settings"></span>
             <span class="desc">Settings</span>
           </a>
@@ -100,33 +102,51 @@
 
 
       <!-- dashboard -->
+
       <div class="dashboard">
         <div class="cardcolumn">
+          <!-- new test card -->
           <div class="card">
             <header>
-              <a class="title" href="#"></a>
+             <a class="title" href="#">Name</a>
               <span class="iconoir-more-vert"></span>
             </header>
-            <div class="content"></div>
-            <div class="meta">
+            <div class="content">
+            </div>
+              <p>Streak:</p><div class="streak" href="#"></div>
+              <p>Frequency: </p><div class="frequency" href="#"></div>
+              <p>Start Date: </p><div class="startDate" href="#"></div>
+              <p>Quantity: </p><div class="quantity" href="#"></div>
+
+              <div class="meta">
               <span class="iconoir-pin"></span>
               <span class="iconoir-eye-off"></span>
               <span class="iconoir-share-ios"></span>
             </div>
           </div>
+
+
           <div class="card">
             <header>
-              <a class="title" href="#"></a>
+             <a class="title" href="#">Name</a>
               <span class="iconoir-more-vert"></span>
             </header>
-            <div class="content"></div>
-            <div class="meta">
+            <div class="content">
+            </div>
+              <p>Streak:</p><div class="streak" href="#"></div>
+              <p>Frequency: </p><div class="frequency" href="#"></div>
+              <p>Start Date: </p><div class="startDate" href="#"></div>
+              <p>Quantity: </p><div class="quantity" href="#"></div>
+
+              <div class="meta">
               <span class="iconoir-pin"></span>
               <span class="iconoir-eye-off"></span>
               <span class="iconoir-share-ios"></span>
             </div>
           </div>
         </div>
+
+
         <div class="cardcolumn">
           <div class="card">
             <header>
@@ -183,30 +203,27 @@
 
       <!-- side column bar -->
       <div class="side">
+ 
+
         <div class="card weather">
           <!-- add a habit -->
-          <label for="habit">Add Habit: </label>
-          <input type="text"  id="habit" name="habit" placeholder="Your habit..." required>
-     
-           <label for="frequency">Goal Frequency: </label>
-           <input type="text"  id="frequency" name="frequency" placeholder="E.g. 3, 5, 10" required>
-         
-          <label for="units">Choose units:</label>
-          <input type="text"  id="units" name="units" placeholder="E.g. glasses, miles, kilometers" required>
-     
-          <label for="time">Per: (Choose period of time)</label>
-          <input type="text"  id="time" name="time" placeholder="E.g. days, weeks" required>
-          <label for="start">Start date:</label>
-          <input type="date" id="start" name="trip-start"
-                 value="2018-07-22"
-                 min="2018-01-01" max="2018-12-31">
+          <form id="formhab">
+            <label for="habit">Add Habit: </label>
+            <input type="text"  id="habit" name="habit" placeholder="Your habit..." required>
+      
+            <label for="frequency">Goal Frequency: </label>
+            <input type="text"  id="frequency" name="frequency" placeholder="E.g. 3, 5, 10" required>
           
-          <label for="start">End date:</label>
-          <input type="date" id="start" name="trip-start"
-                        value="2018-07-22"
-                        min="2018-01-01" max="2018-12-31">
-                 
-           <input type="button" name="button" id="addHabitBtn" value="Add Habit">
+            <!-- This input is not in database -->
+            <label for="units">Choose units:</label>
+            <input type="text"  id="units" name="units" placeholder="E.g. glasses, miles, kilometers" required>
+      
+            <!-- This input is not in database -->
+            <label for="time">Per: (Choose period of time)</label>
+            <input type="text"  id="time" name="time" placeholder="E.g. days, weeks" required>
+                  
+            <input type="submit" name="button" id="addHabitBtn" value="Add Habit">
+          </form>
           </div>
           
         <div class="card weather">

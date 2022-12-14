@@ -20,7 +20,7 @@ logform.addEventListener("submit", async (e) => {
 
   if (response.status == 200) {
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
     localStorage.setItem("session", data.session);
     // localStorage.setItem("id", data.account_id);
     window.location.assign(`newdashboard.html?account_id=${data.account_id}`);

@@ -1,4 +1,5 @@
 const serverPath = `http://localhost:3000`;
+const accountId = window.location.href.split("=")[1]
 
 const habitButton = document.getElementById("addHabitBtn")
 
@@ -98,9 +99,20 @@ logoutBtn.addEventListener('click', () => {
 
 
 let greeting = document.getElementById('showUsername')
-
-
 greeting.innerHTML = `Hello ${localStorage.getItem('username')}!`
 console.log(localStorage.getItem('username')) 
 
-    
+const settingLink = document.getElementById("setting-link");
+settingLink.addEventListener("click", () => {
+  window.location.assign(`settings.html?account_id=${accountId}`);
+})
+
+const habitstatLink = document.getElementById("habit-stat-link");
+habitstatLink.addEventListener("click",() => {
+  window.location.assign(`habitstat.html?account_id=${accountId}`);
+})
+
+const dashboardLink = document.getElementById("newdashboard-link");
+dashboardLink.addEventListener("click", () => {
+  window.location.assign(`newdashboard.html?account_id=${accountId}`);
+})

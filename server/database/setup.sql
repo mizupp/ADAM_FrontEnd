@@ -15,7 +15,9 @@ CREATE TABLE habits (
     habit_id serial PRIMARY KEY,
     account_id Int NOT NULL,
     habit_name varchar(255) NOT NULL,
+    units varchar(20),
     frequency INT NOT NULL,
+    time_period varchar(20),
     streak INT NOT NULL,
     FOREIGN KEY (account_id) REFERENCES accounts(account_id)
 );
@@ -38,6 +40,6 @@ CREATE TABLE dates (
 );
 
 INSERT INTO accounts (username, user_password, dark_mode, avatar) VALUES ('Mildred', '$2b$10$7mKj4gbZe8QPrPKqLaOVQOG.DgLV.xm0tfvikKZ2SFGKtoEmXLFuS', '' , '' );
-INSERT INTO habits (account_id, habit_name, frequency, streak) VALUES (1, 'water', 4, 4);
-INSERT INTO habits (account_id, habit_name, frequency, streak) VALUES (1, 'sad', 4, 4);
-INSERT INTO habits (account_id, habit_name, frequency, streak) VALUES (1, 'happy', 4, 4);
+INSERT INTO habits (account_id, habit_name, units, frequency, time_period, streak) VALUES (1, 'water','glasses', 4,'daily', 4);
+INSERT INTO habits (account_id, habit_name, units, frequency, time_period, streak) VALUES (1, 'sad','glasses', 4,'daily', 4);
+INSERT INTO habits (account_id, habit_name, units, frequency, time_period, streak) VALUES (1, 'happy','glasses', 4,'daily', 4);

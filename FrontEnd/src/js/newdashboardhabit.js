@@ -28,7 +28,6 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
 
 
 
-
           const newCard = () => {
             const node = document.createElement("div");
             const textnode = document.createTextNode("Water");
@@ -37,6 +36,7 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
 
             piey.appendChild(node);
           }
+
 // Populate News
 const dummyData = () => {
   mainCards.forEach((card, i) => {
@@ -50,5 +50,6 @@ const dummyData = () => {
     );
   });
 };
+
 dummyData();
 newCard();

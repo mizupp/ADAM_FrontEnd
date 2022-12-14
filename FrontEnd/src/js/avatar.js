@@ -1,4 +1,16 @@
-document.addEventListener("DOMContentLoaded", async () => {
+document.querySelector("#myFileInput").addEventListener("change", function() {
+    // console.log(this.files);
+    const reader = new FileReader();
+    reader.addEventListener("load", () => {
+        // console.log(reader.result);
+        window.localStorage.setItem("recent-image", reader.result);
+    });
+    reader.readAsDataURL(this.files[0]);
+})   
+
+const avatarBtn = document.getElementById("avatar-button");
+
+avatarBtn.addEventListener("click", async () => {
     const recentImageDataUrl = window.localStorage.getItem("recent-image");
     const id = window.location.href.split("=")[1];
     if(recentImageDataUrl){
@@ -25,7 +37,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         body: JSON.stringify(data)
     }
 
-    console.log(JSON.stringify(data))
+    // console.log(JSON.stringify(data))
     
     const responsePut = await fetch(`http://localhost:3000/users/${id}`, putOptions);
     const putData = await responsePut.json();
