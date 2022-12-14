@@ -58,10 +58,11 @@
             <span class="iconoir-report-columns"></span>
             <span class="desc">Dashboard</span>
           </a>
-          <a id="habit-stat-link" class="menu-item ">
+          <!-- This page is no longer needed -->
+          <!-- <a id="habit-stat-link" class="menu-item ">
             <span class="iconoir-google-docs"></span>
             <span class="desc">Habit Stats</span>
-          </a>
+          </a> -->
           <a id="setting-link" class="menu-item">
             <span class="iconoir-settings"></span>
             <span class="desc">Settings</span>
@@ -91,7 +92,7 @@
         </span>
         
         <nav>
-          <a href="#" class="menu-item">Adam</a>
+          <a href="#" class="menu-item">ADAM</a>
           <!-- added functionality  -->
           <button class="menu-item" id="logout-btn">Logout</button>
 
@@ -113,10 +114,10 @@
             </header>
             <div class="content">
             </div>
-              <p>Streak:</p><div class="streak" href="#"></div>
-              <p>Frequency: </p><div class="frequency" href="#"></div>
-              <p>Start Date: </p><div class="startDate" href="#"></div>
-              <p>Quantity: </p><div class="quantity" href="#"></div>
+              <p>Streak:</p><div class="streak1" href="#"></div>
+              <p>Frequency: </p><div class="frequency1" href="#"></div>
+              <p>Start Date: </p><div class="startDate1" href="#"></div>
+              <p>Quantity: </p><div class="quantity1" href="#"></div>
 
               <div class="meta">
               <span class="iconoir-pin"></span>
@@ -131,12 +132,17 @@
              <a class="title" href="#">Name</a>
               <span class="iconoir-more-vert"></span>
             </header>
-            <div class="content">
-            </div>
+            <!-- <div class="content">
+            </div> -->
               <p>Streak:</p><div class="streak" href="#"></div>
               <p>Frequency: </p><div class="frequency" href="#"></div>
               <p>Start Date: </p><div class="startDate" href="#"></div>
               <p>Quantity: </p><div class="quantity" href="#"></div>
+              <!-- Checkbox -->
+              <div class="task">
+                <div class="checkboxtask"></div>
+                <div class="description">I completed the task.</div>
+              </div>
 
               <div class="meta">
               <span class="iconoir-pin"></span>
@@ -203,8 +209,6 @@
 
       <!-- side column bar -->
       <div class="side">
- 
-
         <div class="card weather">
           <!-- add a habit -->
           <form id="formhab">
@@ -213,10 +217,10 @@
       
             <label for="frequency">Goal Frequency: </label>
             <input type="text"  id="frequency" name="frequency" placeholder="E.g. 3, 5, 10" required>
-          
+           
             <!-- This input is not in database -->
             <label for="units">Choose units:</label>
-            <input type="text"  id="units" name="units" placeholder="E.g. glasses, miles, kilometers" required>
+            <input type="text"  id="units" name="units" placeholder="E.g. glasses, hours, kilometers" required>
       
             <!-- This input is not in database -->
             <label for="time">Per: (Choose period of time)</label>

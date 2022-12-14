@@ -28,7 +28,7 @@ class Habit {
   }
 
   static async create(data) {
-    const { account_id, habit_name, frequency, streak } = data;
+    const { account_id, habit_name, frequency, units, time_period, streak } = data;
     let response = await db.query(
       `INSERT INTO habits (account_id, habit_name, units, frequency, time_period, streak) 
                                         VALUES ($1, $2, $3, $4, $5, $6) RETURNING habit_id;`,
@@ -42,7 +42,7 @@ class Habit {
   static async update(data) {
     return new Promise(async (resolve, reject) => {
       try {
-        const { account_id, habit_name, frequency, streak } = data;
+        const { account_id, habit_name, frequency, units, time_period, streak } = data;
         let result = await db.query(
           `UPDATE habits SET account_id = $1, habit_name = $2, units = $3, frequency = $4, time_period = $5, streak = $6 WHERE habit_id = $7 RETURNING *;`,
           [account_id, habit_name, units, frequency, time_period, streak, habit_id]

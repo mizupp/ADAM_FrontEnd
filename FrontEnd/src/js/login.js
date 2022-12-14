@@ -16,8 +16,9 @@ logform.addEventListener("submit", async (e) => {
     body: JSON.stringify({ username: username, password: password }),
   };
 
+  console.log("test")
   const response = await fetch(url, options);
-
+  console.log(response.status)
   if (response.status == 200) {
     const data = await response.json();
     // console.log(data);

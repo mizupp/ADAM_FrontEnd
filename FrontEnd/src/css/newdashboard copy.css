@@ -471,7 +471,6 @@
   main .dashboard .cardcolumn .card header a {
     color: inherit;
     text-decoration: none;
-    font-size: 2rem;
     margin: 0;
     font-size: 14px;
     font-weight: 600;
@@ -674,18 +673,16 @@
       margin-top: 60px;
       border-top: unset;
       height: calc(100vh - (2 * var(--o-padding)) - 60px);
-      /* -ms-grid-columns: 1fr var(--o-padding) 1fr var(--o-padding) 1fr; */
-      grid-template-columns: repeat(1, 1fr);
+      -ms-grid-columns: 1fr var(--o-padding) 1fr var(--o-padding) 1fr;
+      grid-template-columns: repeat(3, 1fr);
     }
     main .side {
-      display: inline-block;
       -webkit-box-ordinal-group: 1;
       -ms-flex-order: 0;
       order: 0;
       height: calc(100vh - (2 * var(--o-padding)) - 60px);
       border-top: unset;
       margin-top: 60px;
-      display: absolute;
       border-radius: 0 0 var(--radius) 0;
     }
   }

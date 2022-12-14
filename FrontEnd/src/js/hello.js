@@ -42,10 +42,10 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.assign(`settings.html?account_id=${accountId}`);
   })
 
-  const habitstatLink = document.getElementById("habit-stat-link");
-  habitstatLink.addEventListener("click",() => {
-    window.location.assign(`habitstat.html?account_id=${accountId}`);
-  })
+  // const habitstatLink = document.getElementById("habit-stat-link");
+  // habitstatLink.addEventListener("click",() => {
+  //   window.location.assign(`habitstat.html?account_id=${accountId}`);
+  // })
 
   const dashboardLink = document.getElementById("newdashboard-link");
   dashboardLink.addEventListener("click", () => {

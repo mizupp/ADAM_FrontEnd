@@ -1,9 +1,10 @@
-// Create new hbit function 
+// Create new habit function 
 
 document.getElementById("formhab").addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const form = Object.create( new FormData(e.target));
+    const form = new FormData(e.target);
+    console.log(form)
 
     const options = {
         method: "POST",
@@ -24,8 +25,11 @@ document.getElementById("formhab").addEventListener("submit", async (e) => {
     }
 
     const result = await fetch(`http://localhost:3000/habits`, options);
-
+    console.log(result)
     if (result.status == 201) {
         window.location.reload();
+    }
+    else {
+        console.log("Habit not created")
     }
 })
