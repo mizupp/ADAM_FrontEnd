@@ -89,12 +89,11 @@ const dummyData = (hb) => {
 
 const newCard = (hb) => {
 
-
-  const apple = document.createElement("div");
-  apple.classList.add("apple");
-  for (let i =0; i < hb.length; i++) {
+  // const apple = document.createElement("div");
+  // apple.classList.add("apples");
+  for (let i =0; i < 10; i++) {
     console.log("apple on the tree: works")
-    tree.appendChild(apple);
+    // tree.appendChild(apple);
   }
 
   console.log(hb)
@@ -126,10 +125,10 @@ const newCard = (hb) => {
 
     // Quantity not needed?
     
-    // const quantityLabel = document.createElement("p");
-    // quantityLabel.textContent = `Quantity: ${hb.quantity}`
-    // const quantity = document.createElement("p");
-    // quantity.textContent = hb.quantity;
+    const quantityLabel = document.createElement("p");
+    quantityLabel.textContent = `Quantity: ${hb.quantity}`
+    const quantity = document.createElement("p");
+    quantity.textContent = hb.quantity;
 
     const task = document.createElement("div");
     task.classList.add("task");
@@ -137,10 +136,9 @@ const newCard = (hb) => {
     checkbox.classList.add("checkboxtask");
 
     checkbox.addEventListener("click", async () => {
-      
         // Increase streak by 1
         // Send in a PUT request to http://localhost:3000/habits
-        //
+        
         const habitId = hb.id;
         const url = `http://localhost:3000/habits/${habitId}`
         const options = {
@@ -156,12 +154,13 @@ const newCard = (hb) => {
                 frequency: hb.frequency,
                 units: hb.units,
                 time_period: hb.time_period,
-                streak: hb.streak++
-                // The time stamp
+                streak: hb.streak++,
+                habit_id: hb.id,
           })
     }
     const response = await fetch(url, options);
     const updatedStreak = await response.json();
+    streakLabel.textContent = `Streak: ${updatedStreak.streak}`
     console.log(updatedStreak)
 
   })
@@ -209,4 +208,37 @@ const newCard = (hb) => {
     var piey = document.getElementsByClassName("cardcolumn")[0];
     piey.appendChild(card);
 
+
+  // Delete function and add delete button habi
+
+    async function deleteHabit(hb) { // What should be in the brackets?
+      try {
+          const habitId = hb.id;
+          const options = {method: "DELETE"}
+          response = await fetch(`http://localhost:3000/habit/${habitId}`, options)
+          
+          if (response.status == 200) {
+              window.location.reload()
+          }
+          else {
+              console.log("Habit could not be deleted")
+          }
+      }
+      catch(err) {
+          console.warn(err)
+      }
   }
+  
+  // Adding delete button to habit card
+  
+  function renderDelButton(habitData) { // What should be here?
+      const del = document.createElement("button")
+      del.textContent = "Delete Habit"
+      del.onclick = () => deleteHabit(habitData.habit_id)
+      card.appendChild(del)    
+  }
+  
+
+  }
+
+

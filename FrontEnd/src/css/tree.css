@@ -178,6 +178,17 @@
     animation-delay: 0.5s;
   }
 
+  .apples{
+    left: 100%;
+    background-color: rgb(255, 187, 113);
+    width: 40px;
+    height: 38px;
+    border-radius: 55% 57% 40% 42% / 64% 65% 70% 68%;
+    border-left: 3px solid rgb(255, 220, 197);
+    border-right: 1px solid rgb(255, 214, 188);
+    transform-origin: 0% 100%;
+  }
+
 
   .apples:nth-child(odd) {
     left: 100%;
@@ -206,10 +217,7 @@
     animation-duration: 4s;
     animation-fill-mode: both;
   }
-  /* .apples{
-    
-  } */
-
+ 
   @keyframes apple-odd-grow {
     0% {
       transform: scale(0);

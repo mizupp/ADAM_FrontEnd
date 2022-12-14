@@ -114,7 +114,7 @@ async function update(req, res) {
     const id = req.params.id;
     const user = await User.getOneById(id);
     // console.log("User",user)
-    if (user.user_password != newUser.password) {
+    if (user.password != newUser.password) {
       const salt = await bcrypt.genSalt(
         parseInt(process.env.BCRYPT_SALT_ROUNDS)
       );
