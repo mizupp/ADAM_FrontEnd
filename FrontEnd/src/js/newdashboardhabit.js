@@ -26,6 +26,17 @@ const today = new Date();
 const formatZero = (value) => value<10 ? '0'+value : value;
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
+
+
+
+          const newCard = () => {
+            const node = document.createElement("div");
+            const textnode = document.createTextNode("Water");
+            node.appendChild(textnode);
+            var piey = document.getElementsByClassName("cardcolumn")[0];
+
+            piey.appendChild(node);
+          }
 // Populate News
 const dummyData = () => {
   mainCards.forEach((card, i) => {
@@ -40,3 +51,4 @@ const dummyData = () => {
   });
 };
 dummyData();
+newCard();
