@@ -129,3 +129,18 @@ input[type=text] {
     transform: scale(0.8);
 
   }
+
+  main #logout-btn{
+    border: none;
+    color: rgb(66, 108, 0);
+  }
+  main .thumb2 {
+    max-width: 80px;
+  }
+  #putcircle{
+    height: 50px;
+    width: 50px;
+    background-color: rgba(0, 0, 0, 0.39);
+    border-radius: 50%;
+    display: inline-block;
+  }

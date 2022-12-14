@@ -237,8 +237,7 @@ const newCard = (hb) => {
       del.onclick = () => deleteHabit(habitData.habit_id)
       card.appendChild(del)    
   }
-  
 
-  }
+}
 
 
