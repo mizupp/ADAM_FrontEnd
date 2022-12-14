@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- stylesheets -->
     <link rel="stylesheet" href="../src/css/newdashboard.css" />
     <link rel="stylesheet" href="../src/css/tree.css" />
-
+    <link rel="stylesheet" href="../src/css/lightmode.css" />
+    <!-- js scripts -->
     <script defer src="../src/js/newdashboard.js"></script>
-    <title>Document</title>
+    <script defer src="../src/js/lightmode.js"></script>
+    <!-- external sheets -->
+    <script src="https://kit.fontawesome.com/72cadd43e1.js" crossorigin="anonymous"></script>
+
+
+    <title>ADAM DASHBOARD</title>
 </head>
 <body>
-
-    
     <!-- menu bar with container for user avatar -->
     <main class="container">
       <div class="menu">
@@ -43,21 +49,33 @@
         </nav>
         <span class="expander iconoir-arrow-right"></span>
       </div>
+     <!-- end of side bar menu -->
+    
+    <!-- top of navigation menu -->
       <div class="topbar">
-        <h1 class="current">Dashboard</h1>
+        <h1 class="current">Welcome Back, Username</h1>
         <span class="search">
           <label><span class="iconoir-search"></span></label>
           <input class="bar" type="text" placeholder="Search..." />
         </span>
-        <!-- end of side bar menu -->
-
-        <!-- top of navigation menu -->
+        <span class="">
+            <div class = "darkbuttontg" id="darkbutton">
+                <input type="checkbox" class="checkbox" id="chk" />
+                <label class="label" for="chk">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+        </span>
+        
         <nav>
           <a href="#" class="menu-item">Adam</a>
           <a href="#" class="menu-item">Log out</a>
         </nav>
       </div>
-      <!-- end of navigation menu -->
+      <!-- end of top and entire navigation menu -->
+
 
       <!-- dashboard -->
       <div class="dashboard">

@@ -2,19 +2,13 @@
 const toggleBtn = document.getElementById("chk");
 let darkMode = localStorage.getItem("dark-mode");
 
-
 const enableDarkMode = () => {
 	document.body.classList.add('dark');
-	// theme.classList.add("dark");
-	// toggleBtn.classList.remove("dark");
 	localStorage.setItem("dark-mode", "enabled");
   };
 
   const disableDarkMode = () => {
 	document.body.classList.remove('dark');
-
-// 	theme.classList.remove("dark-mode-theme");
-// 	toggleBtn.classList.add("dark-mode-toggle");
  	localStorage.setItem("dark-mode", "disabled");
   };
   
