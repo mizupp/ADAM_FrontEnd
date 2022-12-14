@@ -1,8 +1,6 @@
 // Script for the home page
 
 window.addEventListener("load", updateMain);
-
-
 function updateMain() {
 // FETCH DATA
 
