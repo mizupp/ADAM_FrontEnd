@@ -9,7 +9,7 @@ window.addEventListener("load", async () => {
   const response = await fetch("http://localhost:3000/habits", options);
   const data = await response.json();
   console.log(data);
-
+  console.log("this are habits");
   if (response.status == 401) {
     window.location.assign("newmain.html");
   }

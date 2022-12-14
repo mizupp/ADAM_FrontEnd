@@ -23,7 +23,7 @@ logform.addEventListener("submit", async (e) => {
     console.log(data);
     localStorage.setItem("session", data.session);
     // localStorage.setItem("id", data.account_id);
-    window.location.assign(`index.html?account_id=${data.account_id}`);
+    window.location.assign(`newdashboard.html?account_id=${data.account_id}`);
     
   } else {
     alert("Uh oh, it was wrong!");

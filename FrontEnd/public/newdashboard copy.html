@@ -13,20 +13,18 @@
     <link rel="stylesheet" href="../src/css/lightmode.css" />
 
     <!-- js scripts -->
-    <script defer src="../src/js/newdashboardhabit.js"></script>
+    <script defer src="../src/js/newdashboard.js"></script>
     <script defer src="../src/js/lightmode.js"></script>
     <script defer src="../src/js/logout.js"></script>
     <script defer src="../src/js/avatar.js"></script>
     <script defer src="../src/js/todo.js"></script>
 
-    <script defer src="../src/js/habits.js"></script>
-
+    <script defer src="../src/js/hello.js"></script>
 
     <!-- external sheets -->
     <script src="https://kit.fontawesome.com/72cadd43e1.js" crossorigin="anonymous"></script>
 
-    <script defer src="../src/js/hello.js"></script>
-    
+
     <title>ADAM DASHBOARD</title>
 </head>
 <body>
@@ -41,7 +39,7 @@
         <div class="avatar">
           <img id="imgPreview"
             class="thumb"
-            src="../src/img/avatar.png"
+            src=""
             width="60"
             alt="Preview"
           />
@@ -52,11 +50,11 @@
 
         <!-- links -->
         <nav class="primary">
-          <a href="newdashboard.html" class="menu-item ">
+          <a href="newdashboard.html" class="menu-item active">
             <span class="iconoir-report-columns"></span>
             <span class="desc">Dashboard</span>
           </a>
-          <a href="habitstat.html" class="menu-item active">
+          <a href="habitstat.html" class="menu-item ">
             <span class="iconoir-google-docs"></span>
             <span class="desc">Habit Stats</span>
           </a>
@@ -72,7 +70,7 @@
     <!-- top of navigation menu -->
       <div class="topbar">
         
-        <h1 class="current">Welcome Back, Username</h1>
+        <h1 id="welcomeUsername" class="current">Welcome Back, </h1>
         <span class="search">
           <label><span class="iconoir-search"></span></label>
           <input class="bar" type="text" placeholder="Search..." />
@@ -103,23 +101,16 @@
       <div class="dashboard">
         <div class="cardcolumn">
           <div class="card">
-            <table id="habitTable">
-              <thead>
-              <tr>
-                  <td>Habit</td>
-                  <td>Frequency</td>
-                  <td>Units</td>
-                  <td>Per</td>
-                  <td>Progress</td>
-                  <td></td>
-              </tr>
-            </thead>
-           <tbody></tbody>
-           </table>
             <header>
               <a class="title" href="#"></a>
+              <span class="iconoir-more-vert"></span>
             </header>
             <div class="content"></div>
+            <div class="meta">
+              <span class="iconoir-pin"></span>
+              <span class="iconoir-eye-off"></span>
+              <span class="iconoir-share-ios"></span>
+            </div>
           </div>
           <div class="card">
             <header>
@@ -134,7 +125,6 @@
             </div>
           </div>
         </div>
-        
         <div class="cardcolumn">
           <div class="card">
             <header>
@@ -192,38 +182,102 @@
       <!-- side column bar -->
       <div class="side">
         <div class="card weather">
-        <!-- add a habit -->
-        <label for="habit">Add Habit: </label>
-        <input type="text"  id="habit" name="habit" placeholder="Your habit..." required>
-   
-         <label for="frequency">Goal Frequency: </label>
-         <input type="text"  id="frequency" name="frequency" placeholder="E.g. 3, 5, 10" required>
-       
-        <label for="units">Choose units:</label>
-        <input type="text"  id="units" name="units" placeholder="E.g. glasses, miles, kilometers" required>
-   
-        <label for="time">Per: (Choose period of time)</label>
-        <input type="text"  id="time" name="time" placeholder="E.g. days, weeks" required>
-        <label for="start">Start date:</label>
-        <input type="date" id="start" name="trip-start"
-               value="2018-07-22"
-               min="2018-01-01" max="2018-12-31">
-        
-        <label for="start">End date:</label>
-        <input type="date" id="start" name="trip-start"
-                      value="2018-07-22"
-                      min="2018-01-01" max="2018-12-31">
-               
-         <input type="button" name="button" id="addHabitBtn" value="Add Habit">
+        <!-- tree -->
+            <div class="canvas">
+            <div class="tree">
+              <div class="trunk">
+                <div class="branch">
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                </div>
+                <div class="branch">
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                </div>
+                <div class="branch">
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                </div>
+                <div class="branch">
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="apples"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                </div>
+                <div class="branch">
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="apples"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                </div>
+                <div class="branch">
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+
+                  <div class="leaf"></div>
+                </div>
+                <div class="branch">
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="apples"></div>
+                  <div class="leaf"></div>
+                </div>
+                <div class="branch">
+                  <div class="leaf"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
         <div class="card">
-          <header>Idk what to put here</header>
-          <div class="content">
-            <div>
-        
-            
-            </div>
 
+          <header>Notes</header>
+
+          <div class="content">
+            <!-- to do list -->
+
+            <form class="form">
+              <div>
+                <label class="form__label" for="todo">~ Today I need to ~</label>
+                <input class="form__input"
+                     type="text" 
+                     id="todo" 
+                     name="to-do"
+                     size="30"
+                     required>
+                <button class="button"><span>Submit</span></button>
+              </div>
+            </form>
+
+            <div>
+              <ul class="toDoList">
+              </ul>
+            </div>
+            <!-- end of to do list -->
+            <ul>
+              <li>Take a chill pill</li>
+              <li>Get some sleep idiot</li>
+              <li>Eat Fruit not chocolate</li>
+              <li>Who drinks pepsi max at 4am?</li>
+            </ul>
           </div>
         </div>
       </div>

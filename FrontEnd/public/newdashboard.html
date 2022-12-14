@@ -13,11 +13,14 @@
     <link rel="stylesheet" href="../src/css/lightmode.css" />
 
     <!-- js scripts -->
+    <script defer src="../src/js/importdata.js"></script>
     <script defer src="../src/js/newdashboard.js"></script>
     <script defer src="../src/js/lightmode.js"></script>
     <script defer src="../src/js/logout.js"></script>
     <script defer src="../src/js/avatar.js"></script>
     <script defer src="../src/js/todo.js"></script>
+
+    <script defer src="../src/js/hello.js"></script>
 
     <!-- external sheets -->
     <script src="https://kit.fontawesome.com/72cadd43e1.js" crossorigin="anonymous"></script>
@@ -37,13 +40,13 @@
         <div class="avatar">
           <img id="imgPreview"
             class="thumb"
-            src="../src/img/avatar.png"
+            src=""
             width="60"
             alt="Preview"
           />
           <!-- <img id="imgPreview" src ="" alt="Preview"> -->
             <!-- user name text box change -->
-          <span class="name">userNametext</span>
+          <span id="showUsername" class="name">userNametext</span>
         </div>
 
         <!-- links -->
@@ -52,7 +55,7 @@
             <span class="iconoir-report-columns"></span>
             <span class="desc">Dashboard</span>
           </a>
-          <a href="habits.html" class="menu-item">
+          <a href="habitstat.html" class="menu-item ">
             <span class="iconoir-google-docs"></span>
             <span class="desc">Habit Stats</span>
           </a>
@@ -68,7 +71,7 @@
     <!-- top of navigation menu -->
       <div class="topbar">
         
-        <h1 class="current">Welcome Back, Username</h1>
+        <h1 id="welcomeUsername" class="current">Welcome Back, </h1>
         <span class="search">
           <label><span class="iconoir-search"></span></label>
           <input class="bar" type="text" placeholder="Search..." />
@@ -179,6 +182,32 @@
 
       <!-- side column bar -->
       <div class="side">
+        <div class="card weather">
+          <!-- add a habit -->
+          <label for="habit">Add Habit: </label>
+          <input type="text"  id="habit" name="habit" placeholder="Your habit..." required>
+     
+           <label for="frequency">Goal Frequency: </label>
+           <input type="text"  id="frequency" name="frequency" placeholder="E.g. 3, 5, 10" required>
+         
+          <label for="units">Choose units:</label>
+          <input type="text"  id="units" name="units" placeholder="E.g. glasses, miles, kilometers" required>
+     
+          <label for="time">Per: (Choose period of time)</label>
+          <input type="text"  id="time" name="time" placeholder="E.g. days, weeks" required>
+          <label for="start">Start date:</label>
+          <input type="date" id="start" name="trip-start"
+                 value="2018-07-22"
+                 min="2018-01-01" max="2018-12-31">
+          
+          <label for="start">End date:</label>
+          <input type="date" id="start" name="trip-start"
+                        value="2018-07-22"
+                        min="2018-01-01" max="2018-12-31">
+                 
+           <input type="button" name="button" id="addHabitBtn" value="Add Habit">
+          </div>
+          
         <div class="card weather">
         <!-- tree -->
             <div class="canvas">
