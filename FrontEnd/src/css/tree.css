@@ -177,3 +177,53 @@
     
     animation-delay: 0.5s;
   }
+
+
+  .apples:nth-child(odd) {
+    left: 100%;
+    background-color: rgb(179, 46, 23);
+    width: 40px;
+    height: 38px;
+    border-radius: 55% 57% 40% 42% / 64% 65% 70% 68%;
+    border-left: 3px solid rgb(180, 76, 57);
+    border-right: 1px solid rgb(122, 40, 26);
+    transform-origin: 0% 100%;
+    animation-name: apple-odd-grow;
+    animation-duration: 4s;
+    animation-fill-mode: both;
+  }
+
+  .apples:nth-child(even) {
+    left: 100%;
+    background-color: rgb(224, 118, 4);
+    width: 40px;
+    height: 38px;
+    border-radius: 55% 57% 40% 42% / 64% 65% 70% 68%;
+    border-left: 3px solid rgb(213, 85, 0);
+    border-right: 1px solid rgb(67, 26, 1);
+    transform-origin: 0% 100%;
+    animation-name: apple-even-grow;
+    animation-duration: 4s;
+    animation-fill-mode: both;
+  }
+  /* .apples{
+    
+  } */
+
+  @keyframes apple-odd-grow {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes apple-even-grow {
+    0% {
+      transform: rotate(-90deg) scale(0);
+    }
+    100% {
+      transform: rotate(-90deg) scale(1);
+    }
+  }

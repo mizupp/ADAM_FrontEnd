@@ -5,15 +5,15 @@
     --o-padding: 1.6rem;
     --radius: 10px;
     --max-radius: 40px;
-    --c-lighter: #b1d0e050;
-    --c-light: #b1d0e050;
-    --c-medium: #6998ab60;
+    --c-lighter: #b1e0e050;
+    --c-light: #b1cbe050;
+    --c-medium: #69ab9c60;
     --c-dark: #40688290;
-    --c-darker: #40688260;
-    --c-elements: #b1d0e0;
+    --c-darker: #43408260;
+    --c-elements: #d4e0b1;
     --c-bg-elements: #0004;
-    --c-card-main: #b1d0e090;
-    --c-card-side: #b1d0e040;
+    --c-card-main: #b1b6e090;
+    --c-card-side: #b1d9e040;
   }
   
   html {
@@ -230,6 +230,11 @@
     transform: rotate(-180deg);
   }
   
+  main #logout-btn{
+    border: none;
+    color: rgb(66, 108, 0);
+  }
+
   main .topbar {
     position: fixed;
     left: 0;
@@ -407,12 +412,14 @@
   }
   main .dashboard::-webkit-scrollbar,
   main .side::-webkit-scrollbar {
-    width: 2px;
+    width: 6px;
     background: var(--c-darker);
+    border-radius: 10px;
   }
   main .dashboard::-webkit-scrollbar-thumb,
   main .side::-webkit-scrollbar-thumb {
     background: var(--c-bg-elements);
+    border-radius: 10px;
   }
   main .dashboard .cardcolumn {
     display: -webkit-box;
@@ -630,6 +637,16 @@
     main .menu .avatar .thumb {
       max-width: 70px;
     }
+    main .thumb2 {
+      max-width: 80px;
+    }
+    #putcircle{
+      height: 50px;
+      width: 50px;
+      background-color: rgba(0, 0, 0, 0.39);
+      border-radius: 50%;
+      display: inline-block;
+    }
     main .topbar {
       position: absolute;
       width: calc(100% - 74px);
@@ -650,6 +667,8 @@
       opacity: 1;
       visibility: visible;
     }
+
+
     main .dashboard {
       margin-top: 60px;
       border-top: unset;

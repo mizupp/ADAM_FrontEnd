@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- stylesheets -->
+    <link rel="stylesheet" href="../src/css/todonewdashboard.css" />
+
     <link rel="stylesheet" href="../src/css/newdashboard.css" />
     <link rel="stylesheet" href="../src/css/tree.css" />
     <link rel="stylesheet" href="../src/css/lightmode.css" />
+
     <!-- js scripts -->
     <script defer src="../src/js/newdashboard.js"></script>
     <script defer src="../src/js/lightmode.js"></script>
+    <script defer src="../src/js/logout.js"></script>
+    <script defer src="../src/js/avatar.js"></script>
+    <script defer src="../src/js/todo.js"></script>
+
     <!-- external sheets -->
     <script src="https://kit.fontawesome.com/72cadd43e1.js" crossorigin="anonymous"></script>
 
@@ -21,17 +28,24 @@
 <body>
     <!-- menu bar with container for user avatar -->
     <main class="container">
+
       <div class="menu">
         <div class="avatar">
+            <div id="putcircle"><a href="../public/main.html"><img class="thumb2" src="../src/img/logo.png" width="50" alt="logo"/></a></div>
             <!-- change src to session stored data url -->
-          <img
+        </div>
+        <div class="avatar">
+          <img id="imgPreview"
             class="thumb"
             src="../src/img/avatar.png"
             width="60"
+            alt="Preview"
           />
+          <!-- <img id="imgPreview" src ="" alt="Preview"> -->
             <!-- user name text box change -->
           <span class="name">userNametext</span>
         </div>
+
         <!-- links -->
         <nav class="primary">
           <a href="newdashboard.html" class="menu-item active">
@@ -53,6 +67,7 @@
     
     <!-- top of navigation menu -->
       <div class="topbar">
+        
         <h1 class="current">Welcome Back, Username</h1>
         <span class="search">
           <label><span class="iconoir-search"></span></label>
@@ -71,7 +86,10 @@
         
         <nav>
           <a href="#" class="menu-item">Adam</a>
-          <a href="#" class="menu-item">Log out</a>
+          <!-- added functionality  -->
+          <button class="menu-item" id="logout-btn">Logout</button>
+
+          <!-- <a id="logout-btn" class="menu-item">Log out</a> -->
         </nav>
       </div>
       <!-- end of top and entire navigation menu -->
@@ -194,6 +212,7 @@
                 <div class="branch">
                   <div class="leaf"></div>
                   <div class="leaf"></div>
+                  <div class="apples"></div>
                   <div class="leaf"></div>
                   <div class="leaf"></div>
                   <div class="leaf"></div>
@@ -202,17 +221,20 @@
                   <div class="leaf"></div>
                   <div class="leaf"></div>
                   <div class="leaf"></div>
+                  <div class="apples"></div>
                   <div class="leaf"></div>
                   <div class="leaf"></div>
                 </div>
                 <div class="branch">
                   <div class="leaf"></div>
                   <div class="leaf"></div>
+
                   <div class="leaf"></div>
                 </div>
                 <div class="branch">
                   <div class="leaf"></div>
                   <div class="leaf"></div>
+                  <div class="apples"></div>
                   <div class="leaf"></div>
                 </div>
                 <div class="branch">
@@ -224,18 +246,40 @@
 
         </div>
         <div class="card">
-          <header>Completed</header>
+
+          <header>Notes</header>
+
           <div class="content">
+            <!-- to do list -->
+
+            <form class="form">
+              <div>
+                <label class="form__label" for="todo">~ Today I need to ~</label>
+                <input class="form__input"
+                     type="text" 
+                     id="todo" 
+                     name="to-do"
+                     size="30"
+                     required>
+                <button class="button"><span>Submit</span></button>
+              </div>
+            </form>
+
+            <div>
+              <ul class="toDoList">
+              </ul>
+            </div>
+            <!-- end of to do list -->
             <ul>
-              <li>Drank 6 glasses of water</li>
-              <li>Drank 8 glasses of water</li>
-              <li>Ate 5 fruits/veg</li>
-              <li>Ate 4 fruits/veg</li>
-              <li>Slept 8 hours</li>
+              <li>Take a chill pill</li>
+              <li>Get some sleep idiot</li>
+              <li>Eat Fruit not chocolate</li>
+              <li>Who drinks pepsi max at 4am?</li>
             </ul>
           </div>
         </div>
       </div>
+
     </main>
 
   </body>
