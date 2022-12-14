@@ -21,7 +21,7 @@ regform.addEventListener("submit", async (e) => {
   const response = await fetch(url, options);
 
   if (response.status == 201) {
-    window.location.assign("main.html");
+    window.location.assign("newmain.html");
   } else {
     alert("Uh oh!");
   }

@@ -39,15 +39,7 @@ header img {
     z-index: 1000;
     
 }
-#logoadam{
-    position: absolute;
-    left: 0;
-}
-#darkbutton{
-    position: absolute;
-    right: 5%;
-    top: 10%;
-}
+
 /* Header button extra */
 header button {
     background-color: transparent;

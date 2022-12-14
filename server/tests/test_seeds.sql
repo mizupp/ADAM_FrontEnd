@@ -1,7 +1,7 @@
-DROP TABLE IF EXISTS habits;
-DROP TABLE IF EXISTS user_sessions;
-DROP TABLE IF EXISTS dates;
-DROP TABLE IF EXISTS accounts;
+DROP TABLE IF EXISTS habits CASCADE;
+DROP TABLE IF EXISTS user_sessions CASCADE;
+DROP TABLE IF EXISTS accounts CASCADE;
+DROP TABLE IF EXISTS dates CASCADE;
 
 CREATE TABLE accounts (
     account_id serial PRIMARY KEY,
@@ -37,7 +37,15 @@ CREATE TABLE dates (
     FOREIGN KEY (account_id) REFERENCES accounts(account_id)
 );
 
-INSERT INTO accounts (username, user_password, dark_mode, avatar) VALUES ("mildred", "Qu!7NZPTfpbcbRDfy&Nkk)SfGh$#I)^zb7mjHKJ#8!)AetmYqFtV2%cd@N7(", "yes", "" );
-INSERT INTO habits (account_id, habit_name, frequency, streak) VALUES (1, "water", 4, 4);
-INSERT INTO habits (account_id, habit_name, frequency, streak) VALUES (1, "sad", 4, 4);
-INSERT INTO habits (account_id, habit_name, frequency, streak) VALUES (1, "happy", 4, 4);
+INSERT INTO accounts (username, user_password, dark_mode, avatar) VALUES
+('adam', 'password', 'default', 'avatar'),
+('peter', 'password1', 'dark', 'avatar');
+
+INSERT INTO dates (account_id, habits, date) VALUES
+(1, 'these habits', '2004-10-19 10:23:54');
+
+INSERT INTO habits (account_id, habit_name, frequency, streak) 
+VALUES
+(1, 'Water', 7, 0),
+(1, 'Food', 5, 0);
+
