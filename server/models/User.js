@@ -103,8 +103,8 @@ class User {
         console.log(avatar.length);
         let result = await db.query(
           `UPDATE accounts SET 
-                                        username = $1, user_password = $2, dark_mode = $3, avatar = $4 
-                                        WHERE account_id = $5 RETURNING *;`,
+                              username = $1, user_password = $2, dark_mode = $3, avatar = $4 
+                              WHERE account_id = $5 RETURNING *;`,
           [username, password, dark_mode, avatar, id]
         );
         resolve(result.rows[0]);

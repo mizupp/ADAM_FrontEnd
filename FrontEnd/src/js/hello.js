@@ -20,6 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
         // Update DOM elements
         greeting.textContent = `Hello ${userData.username}!`
         greetingTop.textContent = `Welcome back, ${userData.username}!`
+        const avatarImg= document.querySelector("#imgPreview");
+        console.log(userData.avatar);
+        avatarImg.src = userData.avatar;
+        
       } else {
         greeting.textContent = "An error occured";
         greetingTop.textContent = `Welcome back!`

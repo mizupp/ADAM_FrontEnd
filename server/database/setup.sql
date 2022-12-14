@@ -8,7 +8,7 @@ CREATE TABLE accounts (
     username varchar(20) UNIQUE NOT NULL,
     user_password CHAR(60) NOT NULL,
     dark_mode VARCHAR(7),
-    avatar BYTEA
+    avatar VARCHAR
 );
 
 CREATE TABLE habits (
@@ -37,7 +37,7 @@ CREATE TABLE dates (
     FOREIGN KEY (account_id) REFERENCES accounts(account_id)
 );
 
-INSERT INTO accounts (username, user_password, dark_mode, avatar) VALUES ("mildred", "Qu!7NZPTfpbcbRDfy&Nkk)SfGh$#I)^zb7mjHKJ#8!)AetmYqFtV2%cd@N7(", "yes", "" );
-INSERT INTO habits (account_id, habit_name, frequency, streak) VALUES (1, "water", 4, 4);
-INSERT INTO habits (account_id, habit_name, frequency, streak) VALUES (1, "sad", 4, 4);
-INSERT INTO habits (account_id, habit_name, frequency, streak) VALUES (1, "happy", 4, 4);
+INSERT INTO accounts (username, user_password, dark_mode, avatar) VALUES ('Mildred', '$2b$10$7mKj4gbZe8QPrPKqLaOVQOG.DgLV.xm0tfvikKZ2SFGKtoEmXLFuS', '' , '' );
+INSERT INTO habits (account_id, habit_name, frequency, streak) VALUES (1, 'water', 4, 4);
+INSERT INTO habits (account_id, habit_name, frequency, streak) VALUES (1, 'sad', 4, 4);
+INSERT INTO habits (account_id, habit_name, frequency, streak) VALUES (1, 'happy', 4, 4);
