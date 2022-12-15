@@ -11,8 +11,8 @@ const expander = document.querySelector("main .menu .expander");
 const current = document.querySelector(".current");
 const menuItems = document.querySelectorAll("main .menu .primary .menu-item");
 const mainCards = document.querySelectorAll("main .dashboard .card");
-
-
+const tree = document.querySelectorAll(".branch");
+console.log(tree);
 
 const url = "http://localhost:3000";
 
@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       for (let i = 0; i < habitData.length; i++) {
         // console.log(habitData[i])
         newCard(habitData[i]);
+        renderDelButton(habitData)[i];
       }
       // habitData.forEach((habit) => newCard(habit));
       // newCard(habitData);
@@ -79,8 +80,8 @@ const dummyData = (hb) => {
 };
 
 const newCard = (hb) => {
-  const tree = document.querySelectorAll(".branch");  const apple = document.createElement("div");
-  apple.classList.add("apples");
+  // const apple = document.createElement("div");
+  // apple.classList.add("apples");
   for (let i = 0; i < 10; i++) {
     console.log("apple on the tree: works");
     // tree.appendChild(apple);
@@ -201,31 +202,18 @@ const newCard = (hb) => {
   // node.appendChild(pquantity);
   // node.appendChild(textnode5);
   // // node.appendChild(textnode4);
-  
-  
-  
-  
+  var piey = document.getElementsByClassName("cardcolumn")[0];
+  piey.appendChild(card);
+
   // Delete function and add delete button habi
-  
-  // Adding delete button to habit card
-  
-  const del = document.createElement("button");
-  function renderDelButton(hb) {
-    del.textContent = "Delete Habit";
-    del.onclick = () => deleteHabit(hb.id);
-    card.appendChild(del);
-  }
-  
-  // Add event listener for when del button is presse
-  
-  async function deleteHabit(hbId) {
+
+  async function deleteHabit(hb) {
     // What should be in the brackets?
     try {
-      const habitId = hbId;
-      console.log(`habitId is: ${habitId}`)
+      const habitId = hb.id;
       const options = { method: "DELETE" };
-      response = await fetch(`http://localhost:3000/habits/${habitId}`, options);
-      
+      response = await fetch(`http://localhost:3000/habit/${habitId}`, options);
+
       if (response.status == 200) {
         window.location.reload();
       } else {
@@ -235,9 +223,15 @@ const newCard = (hb) => {
       console.warn(err);
     }
   }
-  
-  renderDelButton(hb);
-  let column = document.getElementsByClassName("cardcolumn")[0];
-  column.appendChild(card);
+
+  // Adding delete button to habit card
+
+  function renderDelButton(hb) {
+    // What should be here?
+    const del = document.createElement("button");
+    del.textContent = "Delete Habit";
+    del.onclick = () => deleteHabit(hb.habit_id);
+    card.appendChild(del);
+  }
 };
 
