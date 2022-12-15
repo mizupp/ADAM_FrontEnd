@@ -1,6 +1,6 @@
 # ADAM_FrontEnd
 
-:apple: :apple: :apple:
+:apple: :leaves: :apple: :leaves: :apple:
 
 Active Day, Active Mind is a habit tracking website aimed at helping users maintain healthy habits. Users are able to track a maximum of 5 habits and can create thier own personalised habits.
 
@@ -29,7 +29,7 @@ Note: You can find the repository for the connected API [here](https://github.co
 - HTML
 - Javascript
 - CSS
-- Deployment: Netlify
+- Deployment: [Netlify](https://www.netlify.com/)
 
 
 ## Process :bar_chart:

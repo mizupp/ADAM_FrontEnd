@@ -7,7 +7,7 @@ regform.addEventListener("submit", async (e) => {
   const username = document.getElementById("regusername").value;
   const password = document.getElementById("regpassword").value;
   console.log("RegisterFunctionRuns");
-  const url = `http://localhost:3000/users/register`;
+  const url = `https://adam-backend.onrender.com/users/register`;
 
   const options = {
     method: "POST",

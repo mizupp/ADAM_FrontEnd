@@ -1,4 +1,4 @@
-const url = require('./url');
+const url = "https://adam-backend.onrender.com";
 
 document.addEventListener("DOMContentLoaded", async () => {
     const options = {

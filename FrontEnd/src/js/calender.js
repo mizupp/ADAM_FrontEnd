@@ -1,6 +1,6 @@
 
 // document.addEventListener("DOMContentLoaded", () => {
-    const url = "http://localhost:3000";
+    const url = "https://adam-backend.onrender.com";
 
     function generate_year_range(start, end) {
         var years = "";

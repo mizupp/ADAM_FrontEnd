@@ -1,6 +1,6 @@
 # ADAM_BackEnd
     
-:apple: :apple: :apple:
+:apple: :leaves: :apple: :leaves: :apple:
 
 Active Day, Active Mind is a habit tracking website aimed at helping users maintain healthy habits. Users are able to track a maximum of 5 habits and can create thier own personalised habits.
 
@@ -24,7 +24,7 @@ Note: You can find the repository for the user interface [here](https://github.c
 ### Usage :open_file_folder:
 
 - Open the terminal 
-    - Run `npm start` to launch server.
+    - Run `npm run dev` to launch server.
     - Run `npm test` to launch test suite.
     - Run `npm run coverage` to create coverage report.
 
@@ -41,7 +41,7 @@ Note: You can find the repository for the user interface [here](https://github.c
 - [pg](https://www.npmjs.com/package/pg)
 - [uuid](https://www.npmjs.com/package/uuid)
 - Testing: [Jest](https://www.npmjs.com/package/jest) and [Supertest](https://www.npmjs.com/package/supertest)
-- Deployment: ???
+- Deployment: [Render](https://render.com/)
 
 
 ## Process :bar_chart:

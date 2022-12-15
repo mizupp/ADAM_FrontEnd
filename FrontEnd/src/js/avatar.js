@@ -22,7 +22,7 @@ avatarBtn.addEventListener("click", async () => {
             Authorization: window.localStorage.getItem("session"),
         }
     }
-    const response = await fetch(`http://localhost:3000/users/${id}`, getOptions)
+    const response = await fetch(`https://adam-backend.onrender.com/users/${id}`, getOptions)
     const data = await response.json();
 
     data.avatar = recentImageDataUrl;
@@ -39,7 +39,7 @@ avatarBtn.addEventListener("click", async () => {
 
     // console.log(JSON.stringify(data))
     
-    const responsePut = await fetch(`http://localhost:3000/users/${id}`, putOptions);
+    const responsePut = await fetch(`https://adam-backend.onrender.com/users/${id}`, putOptions);
     const putData = await responsePut.json();
     // console.log(putData.avatar.length);
     

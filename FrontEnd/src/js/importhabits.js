@@ -8,7 +8,7 @@ const mainCards = document.querySelectorAll("main .dashboard .card");
 
 
 
-const url = "http://localhost:3000";
+const url = "https://adam-backend.onrender.com";
 
 document.addEventListener("DOMContentLoaded", async () => {
   const accountId = window.location.href.split("=")[1];
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       options
     );
     const habitData = await habitResponse.json();
-
+ 
     // habitData.forEach((habit) => newCard(habit))
     // console.log(habitData)
     // console.log(habitData[0]);
@@ -107,7 +107,7 @@ const newCard = (hb) => {
 
 // HERE /////////////////////////////////////
   const frequencyLabel = document.createElement("p");
-  frequencyLabel.textContent = `Frequency: ${hb.frequency}
+  frequencyLabel.textContent = `Goal: ${hb.frequency}
                                  ${hb.units} per ${hb.time_period}`;
 
 
@@ -123,10 +123,10 @@ const newCard = (hb) => {
 
   checkbox.addEventListener("click", async () => {
     // Increase streak by 1
-    // Send in a PUT request to http://localhost:3000/habits
+    // Send in a PUT request to https://adam-backend.onrender.com/habits
     hb.streak++;
     const habitId = hb.id;
-    const url = `http://localhost:3000/habits/${habitId}`;
+    const url = `https://adam-backend.onrender.com/habits/${habitId}`;
     const options = {
       method: "PUT",
       headers: {
@@ -185,7 +185,7 @@ const newCard = (hb) => {
       headers: {
         Authorization: localStorage.getItem("session") }
       };
-      response = await fetch(`http://localhost:3000/habits/${habitId}`, options);
+      response = await fetch(`https://adam-backend.onrender.com/habits/${habitId}`, options);
       
       if (response.status == 204) {
         // card.remove();

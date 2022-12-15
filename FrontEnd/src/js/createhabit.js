@@ -1,10 +1,8 @@
 // Create new habit function
-
 document.getElementById("formhab").addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const form = new FormData(e.target);
-  // console.log(form);
 
   const options = {
     method: "POST",
@@ -25,7 +23,7 @@ document.getElementById("formhab").addEventListener("submit", async (e) => {
     }),
   };
 
-  const result = await fetch(`http://localhost:3000/habits`, options);
+  const result = await fetch(`https://adam-backend.onrender.com/habits`, options);
   console.log(result);
   if (result.status == 201) {
     window.location.reload();

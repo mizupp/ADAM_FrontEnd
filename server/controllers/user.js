@@ -38,17 +38,14 @@ async function datesShow(req, res) {
 async function register(req, res) {
   try {
     const data = req.body;
-
     // Generate a salt with a set time cost
     const salt = await bcrypt.genSalt(parseInt(process.env.BCRYPT_SALT_ROUNDS));
-
     //   Hash the password
     data["password"] = await bcrypt.hash(data["password"], salt);
     // data = {...data, dark_mode: "Default", avatar: ""};
     console.log(data);
     //   Send the username and password off to make a new user
     const result = await User.create(data);
-
     //   Send it back
     res.status(201).send(result);
   } catch (err) {
