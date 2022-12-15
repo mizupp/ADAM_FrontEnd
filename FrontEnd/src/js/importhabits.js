@@ -219,21 +219,25 @@ const newCard = (hb) => {
   // Add event listener for when del button is presse
   
   async function deleteHabit(hbId) {
-    // What should be in the brackets?
     try {
       const habitId = hbId;
       console.log(`habitId is: ${habitId}`)
-      const options = { method: "DELETE" };
+
+      const options = { method: "DELETE",
+      headers: {
+        Authorization: localStorage.getItem("session") }
+      };
       response = await fetch(`http://localhost:3000/habits/${habitId}`, options);
       
-      if (response.status == 200) {
+      if (response.status == 204) {
         window.location.reload();
       } else {
         console.log("Habit could not be deleted");
       }
-    } catch (err) {
-      console.warn(err);
-    }
+
+      } catch (err) {
+        console.warn(err);
+      }
   }
   
   renderDelButton(hb);
