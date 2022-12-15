@@ -153,6 +153,7 @@ header button:hover {
   right: 50%;
   width:600px;
   height: auto;
+  
   z-index: -1;
 }
 
@@ -171,7 +172,7 @@ header button:hover {
     stroke-dasharray: 150, 200;
     stroke-dashoffset: 0;
     animation: pulse 8s infinite linear;
-    
+    filter: blur(0.3px);
 }
 .st1{
     stroke: rgb(9, 68, 17);
@@ -180,7 +181,7 @@ header button:hover {
     stroke-dasharray: 150, 200;
     stroke-dashoffset: 0;
     animation: pulse 10s infinite linear;
-    
+
 }
 
 @keyframes pulse {
@@ -195,4 +196,5 @@ header button:hover {
 #mainlogoadam{
     max-width:300px;
     margin-bottom: 50px;
+    
 }
