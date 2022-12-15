@@ -1,35 +1,47 @@
-# ADAM_FrontEnd
-
+# ADAM_BackEnd
+    
 :apple: :apple: :apple:
 
 Active Day, Active Mind is a habit tracking website aimed at helping users maintain healthy habits. Users are able to track a maximum of 5 habits and can create thier own personalised habits.
 
-This repo contains the HTML, CSS and JavaScript files for the website.
+This repo contains the server files for the website.
 
 ## Motivation :muscle:
 
-## Installation and usage 
+This project is part of the futureproof curriculum for LAP 2 project. We were tasked with the creation of a habit tracking website. 
+                                                                               
+## Installation and Usage 
 
-### Installation :inbox_tray:
+### Installation :inbox_tray: 
 
-Note: You can find the repository for the connected API [here](https://github.com/adamminchella/adam_backend).
+Note: You can find the repository for the user interface [here](https://github.com/mizupp/ADAM_FrontEnd).
 
-- Clone or download this repository.
-- Ensure you have [open in browser](https://marketplace.visualstudio.com/items?itemName=techer.open-in-browser) extension installed in VSCode.
-- Ensure the server in the [backend repository](https://github.com/adamminchella/adam_backend) is running.
-
+- Clone or download the repository.
+- Open the terminal
+  - Run `npm install` to install dependencies.
+  - Run `npm run setup-db` to set up the database.
 
 ### Usage :open_file_folder:
 
-- (In VSCode): Right-click on `newmain.html` in the root directory and choose `Open in Other Brousers` to launch the website in the browser of you choice (Google Chrome is recommended). 
+- Open the terminal 
+    - Run `npm start` to launch server.
+    - Run `npm test` to launch test suite.
+    - Run `npm run coverage` to create coverage report.
 
 
 ## Technologies :desktop_computer:
 
-- HTML
-- Javascript
-- CSS
-- Deployment: Netlify
+- [npm](https://www.npmjs.com/)
+- [express](https://www.npmjs.com/package/express)
+- [nodemon](https://www.npmjs.com/package/nodemon)
+- [cors](https://www.npmjs.com/package/cors)
+- [dayjs](https://www.npmjs.com/package/dayjs)
+- [bycrpt](https://www.npmjs.com/package/bcrypt)
+- [dotenv](https://www.npmjs.com/package/dotenv)
+- [pg](https://www.npmjs.com/package/pg)
+- [uuid](https://www.npmjs.com/package/uuid)
+- Testing: [Jest](https://www.npmjs.com/package/jest) and [Supertest](https://www.npmjs.com/package/supertest)
+- Deployment: ???
 
 
 ## Process :bar_chart:
@@ -42,13 +54,20 @@ Note: You can find the repository for the connected API [here](https://github.co
 - Worked together to fix any bugs and finalise small featues.
 - Deployed website.
 
+## Testing
+
+Testing was ran using Jest and Supertest.
+
+![Test ran](./images/tests.png)
+
+A coverage of 88% was achieved.
+
 
 ## Challeges and Wins
 
 ### Challenges :no_entry:
 
-
-- Streaks :cut_of_meat:
+#### Streaks :cut_of_meat:
 
 The implimentation of the streaks was a challenge on a couple of levels as well as on both the fontend and backend.
 
@@ -58,22 +77,23 @@ When a user clicks the "completed task" button, the timestamp of the that click 
 Then, only if the timestamp of the previous is the previous date or before, will the streak count increment by one.
 The website will also check if the last click was over a day ago and if so, it will start the count back to 1.
 
+
 ### Wins :trophy:
 
 Avatar 
+
 
 ## Bugs :bug:
 
 None so far :crossed_fingers:
 
+## Future Features :timer_clock: 
 
-## Future Features :timer_clock:
+### Progress displays
 
 Currently, progress on the habits is dislpayed by a streak giivng the number of days ina row a habit has been completed.
 
-- Progress bar
-- Calandar ???
- 
+- Progress bar would allow users to see thier progess is a more visual way.
 
 
 ## Contributors 

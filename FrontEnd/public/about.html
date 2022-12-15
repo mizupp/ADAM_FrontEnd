@@ -6,12 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- stylesheets -->
-        <link rel="stylesheet" href="../src/css/about.css" />
+        <!-- <link rel="stylesheet" href="../src/css/about.css" /> -->
+        <link rel="stylesheet" href="../src/css/main.css" />
+        <link rel="stylesheet" href="../src/css/lightmode.css" />
+
+        <script defer src="../src/js/lightmode.js"></script>
     <title>Document</title>
 </head>
 <body>
-<p>ADAM: Active Day Active Mind</p>
-<p>ADAM has been designed to help you get motivated. Habits are what will keep you going.</p>
+    <!-- Header -->
+    <header>
+        <div class="header-buttons">
+                <!-- SVG vector for heartbeat pulse mimic; uses road.css -->
+
+            <div id="darkbutton">
+                <input type="checkbox" class="checkbox" id="chk" />
+                <label class="label" for="chk">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+        </div>   
+    </header>
+
+    <div class="log-buttons">
+        <a href="../public/about.html"><img id="mainlogoadam"  src="../src/img/logogif.gif" alt="logo"/></a>
+    <p>ADAM: Active Day Active Mind</p>
+    <p>ADAM will get you motivated. Habits will keep you going.</p>
+    <div> <a id="scrollbtn" href="#section02"><span id="scrollspan"></span></a></div>    
+    </div>
+
+    <div id="hiddenaboutdiv">
+    <p> Documentation: </p>
+    </div>
+
+
+        
+
+
+
 
     <!-- Adam page; about adam app -->
     <!-- Make a scroll animation that flips div cards top to bottom -->

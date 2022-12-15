@@ -6,33 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- stylesheets -->
+    <link rel="stylesheet" href="../src/css/set.css" />
     <link rel="stylesheet" href="../src/css/todonewdashboard.css" />
+    <!-- <link rel="stylesheet" href="../src/css/general.css" /> -->
 
-    <link rel="stylesheet" href="../src/css/newdashboard.css" />
     <link rel="stylesheet" href="../src/css/tree.css" />
     <link rel="stylesheet" href="../src/css/lightmode.css" />
+    <!-- <link rel="stylesheet" href="../src/css/calender.css" /> -->
+    <link rel="stylesheet" href="../src/css/calender2.css" />
+    <link rel="stylesheet" href="../src/css/calender3.css" />
 
     <!-- js scripts -->
-    <script defer src="../src/js/importhabits.js"></script>
-    <!-- <script defer src="../src/js/newdashboard.js"></script> -->
+
     <script defer src="../src/js/lightmode.js"></script>
     <script defer src="../src/js/logout.js"></script>
-    <script defer src="../src/js/createhabit.js"></script>
+    <!-- <script defer src="../src/js/createhabit.js"></script> -->
     <!-- note: removed avatar -->
     <!-- <script defer src="../src/js/avatar.js"></script> -->
     <script defer src="../src/js/todo.js"></script>
+    <script defer src="../src/js/avatar.js"></script>
     <script defer src="../src/js/logoDirectory.js"></script>
-  
+    <script defer src="../src/js/deleteaccount.js"></script>
+
+    <!-- <script defer src="../src/js/importhabits.js"></script> -->
+
     <script defer src="../src/js/hello.js"></script>
+    <script defer src="../src/js/calender.js"></script>
 
     <!-- external sheets -->
     <script src="https://kit.fontawesome.com/72cadd43e1.js" crossorigin="anonymous"></script>
-
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
     <title>ADAM DASHBOARD</title>
 </head>
 <body>
     <!-- menu bar with container for user avatar -->
+    
     <main class="container">
 
       <div class="menu">
@@ -54,7 +63,7 @@
 
         <!-- links -->
         <nav class="primary">
-          <a id="newdashboard-link" class="menu-item active">
+          <a id="newdashboard-link" class="menu-item ">
             <span class="iconoir-report-columns"></span>
             <span class="desc">Dashboard</span>
           </a>
@@ -67,7 +76,7 @@
             <span class="iconoir-settings"></span>
             <span class="desc">Settings</span>
           </a>
-          <a id="calender-link" class="menu-item">
+          <a id="calender-link" class="menu-item active">
             <span class="iconoir-settings"></span>
             <span class="desc">Calender</span>
           </a>
@@ -109,70 +118,137 @@
       <!-- dashboard -->
 
       <div class="dashboard">
-        <div class="cardcolumn">
-          <div class="card">
+        <div class="setcardcolumn">
+          <!-- new test card -->
+          <div class="setcard">
             <header>
-             <a class="title" href="#">Start creating habits on the right!</a>
-            </header>
-          </div>
-
-
-           <!-- <div class="card">
-            <header>
-             <a class="title" href="#">Name</a>
+             <a class="title" href="#">Calender</a>
               <span class="iconoir-more-vert"></span>
             </header>
-              <p>Streak:</p><div class="streak" href="#"></div>
-              <p>Frequency: </p><div class="frequency" href="#"></div>
-              <p>Start Date: </p><div class="startDate" href="#"></div>
-              <p>Quantity: </p><div class="quantity" href="#"></div>
-              <div class="task">
-                <div class="checkboxtask"></div>
-                <div class="description">I completed the task.</div>
-              </div>
-              <div class="meta">
-              <span class="iconoir-pin"></span>
-              <span class="iconoir-eye-off"></span>
-              <span class="iconoir-share-ios"></span>
+            <div class="content">
             </div>
-          </div> -->
-          
+            <!-- habits for month -->
+            <div>
+              <p> These are your habits for the Month</p>
+              <form id="callycal">
+              <div class="wrapper">
+                <div class="container-calendar">
+                    <h3 id="monthAndYear"></h3>
+                    <div class="button-container-calendar">
+                        <button id="previous" onclick="previous()">&#8249;</button>
+                        <button id="next" onclick="next()">&#8250;</button>
+                    </div>
+                    
+                    <table class="table-calendar" id="calendar" data-lang="en">
+                        <thead id="thead-month"></thead>
+                        <tbody id="calendar-body"></tbody>
+                    </table>
+                    
+                    <div class="footer-container-calendar">
+                         <label for="month">Jump To: </label>
+                         <select id="month" onchange="jump()">
+                             <option value=0>Jan</option>
+                             <option value=1>Feb</option>
+                             <option value=2>Mar</option>
+                             <option value=3>Apr</option>
+                             <option value=4>May</option>
+                             <option value=5>Jun</option>
+                             <option value=6>Jul</option>
+                             <option value=7>Aug</option>
+                             <option value=8>Sep</option>
+                             <option value=9>Oct</option>
+                             <option value=10>Nov</option>
+                             <option value=11>Dec</option>
+                         </select>
+                         <select id="year" onchange="jump()"></select>       
+                    </div>
+            
+                </div>
+                
+            </div>
+          </form>
+            </div>
+
+
+          </div>
+
+<!-- end of calender 1 -->
+<!-- <div class="setcard">
+  <header>
+   <a class="title" href="#">Calender</a>
+  </header>
+  <div>
+    
+    <div class="month">      
+      <ul>
+        <li class="prev">&#10094;</li>
+        <li class="next">&#10095;</li>
+        <li>
+          December<br>
+          <span style="font-size:18px">2022</span>
+        </li>
+      </ul>
+    </div>
+    
+    <ul class="weekdays">
+      <li>Mo</li>
+      <li>Tu</li>
+      <li>We</li>
+      <li>Th</li>
+      <li>Fr</li>
+      <li>Sa</li>
+      <li>Su</li>
+    </ul>
+    
+    <ul class="days">  
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+      <li><span class="active">10</span></li>
+      <li>11</li>
+      <li>12</li>
+      <li>13</li>
+      <li>14</li>
+      <li>15</li>
+      <li>16</li>
+      <li>17</li>
+      <li>18</li>
+      <li>19</li>
+      <li>20</li>
+      <li>21</li>
+      <li>22</li>
+      <li>23</li>
+      <li>24</li>
+      <li>25</li>
+      <li>26</li>
+      <li>27</li>
+      <li>28</li>
+      <li>29</li>
+      <li>30</li>
+      <li>31</li>
+    </ul>
+</div>
+
+</div> -->
         </div>
-
-
-
         <!-- end of dashboard -->
       </div> 
 
       <!-- side column bar -->
       <div class="side">
-        <div class="card weather">
-          <!-- add a habit -->
-          <form id="formhab">
-            <label for="habit">Add Habit: </label>
-            <input type="text"  id="habit" name="habit" placeholder="Your habit..." required>
-      
-            <label for="frequency">Habit Frequency </label>
-            <input type="text"  id="frequency" name="frequency" placeholder="How many times a day?" required>
-           
-            <!-- This input is not in database -->
-            <label for="units">Choose quantity (optional):</label>
-            <input type="text"  id="units" name="units" placeholder="E.g. glasses, hours, kilometers" required>
-      
-            <!-- This input is not in database -->
-            <label for="time">Time Period</label>
-            <input type="text"  id="time" name="time" placeholder="E.g. days, weeks" required>
-                  
-            <input type="submit" name="button" id="addHabitBtn" value="Add Habit">
-          </form>
-          </div>
           
         <div class="card weather">
         <!-- tree -->
             <div class="canvas">
             <div class="tree">
               <div class="trunk">
-                <div class="branch" id="1">
+                <div class="branch">
                   <div class="leaf"></div>
                   <div class="leaf"></div>
                   <div class="leaf"></div>
@@ -181,7 +257,7 @@
                   <div class="leaf"></div>
                   <div class="leaf"></div>
                 </div>
-                <div class="branch" id="2">
+                <div class="branch">
                   <div class="leaf"></div>
                   <div class="leaf"></div>
                   <div class="leaf"></div>
@@ -189,7 +265,7 @@
                   <div class="leaf"></div>
                   <div class="leaf"></div>
                 </div>
-                <div class="branch" id="3">
+                <div class="branch">
                   <div class="leaf"></div>
                   <div class="leaf"></div>
                   <div class="leaf"></div>
@@ -197,34 +273,35 @@
                   <div class="leaf"></div>
                   <div class="leaf"></div>
                 </div>
-                <div class="branch" id="4">
+                <div class="branch">
                   <div class="leaf"></div>
                   <div class="leaf"></div>
-                  <div class="leaf"></div>
-                  <div class="leaf"></div>
-                  <div class="leaf"></div>
-                  <div class="leaf"></div>
-                </div>
-                <div class="branch" id="5">
-                  <div class="leaf"></div>
-                  <div class="leaf"></div>
-                  <div class="leaf"></div>
+                  <div class="apples"></div>
                   <div class="leaf"></div>
                   <div class="leaf"></div>
                   <div class="leaf"></div>
                 </div>
-                <div class="branch" id="6">
+                <div class="branch">
                   <div class="leaf"></div>
                   <div class="leaf"></div>
                   <div class="leaf"></div>
-                </div>
-                <div class="branch" id="7">
-                  <div class="leaf"></div>
-                  <div class="leaf"></div>
+                  <div class="apples"></div>
                   <div class="leaf"></div>
                   <div class="leaf"></div>
                 </div>
-                <div class="branch" id="8">
+                <div class="branch">
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+
+                  <div class="leaf"></div>
+                </div>
+                <div class="branch">
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="apples"></div>
+                  <div class="leaf"></div>
+                </div>
+                <div class="branch">
                   <div class="leaf"></div>
                 </div>
               </div>
@@ -258,10 +335,10 @@
             </div>
             <!-- end of to do list -->
             <ul>
-              <li>Mediate on the beach</li>
-              <li>Take the trash out</li>
-              <li>Eat an apple</li>
-              <li>Drink water</li>
+              <li>Take a chill pill</li>
+              <li>Get some sleep idiot</li>
+              <li>Eat Fruit not chocolate</li>
+              <li>Who drinks pepsi max at 4am?</li>
             </ul>
           </div>
         </div>
@@ -270,8 +347,4 @@
     </main>
 
   </body>
-  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.7/dayjs.min.js"></script>
-  <script>
-    dayjs().format();
-  </script>
 </html>

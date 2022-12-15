@@ -125,6 +125,7 @@ main .menu .avatar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -166,6 +167,7 @@ main .menu .primary {
   overflow: hidden;
 }
 main .menu .primary .menu-item {
+  cursor: pointer;
   font-weight: 400;
   text-decoration: none;
   color: var(--c-elements);
@@ -464,11 +466,13 @@ main .dashboard .cardcolumn .card header {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
+
+
 main .dashboard .cardcolumn .card header a {
   color: inherit;
   text-decoration: none;
   margin: 0;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 600;
   -webkit-line-clamp: 1;
   overflow: hidden;
@@ -623,7 +627,6 @@ main .side .weather .meta .datetime .time {
   }
   main .menu .avatar {
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;

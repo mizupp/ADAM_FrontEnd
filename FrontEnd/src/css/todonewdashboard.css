@@ -41,14 +41,18 @@
   background-color: #f1ed00;
   padding-bottom: 2px;
   box-shadow: 0 2px 0 hsl(198, 1%, 29%);
+  position: relative;
+  
+
 }
 .button span {
   background-color: #005f23;
   display: block;
-  padding: 8px 8px;
+  padding: 10px 10px;
   width: max-content;
   border-radius:35% 65% 25% 75% / 6% 100% 0% 94% ;
-
+  position: relative;
+  
 }
 
 .button:active, .button:focus {
@@ -72,12 +76,25 @@ input[type=text] {
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
-
+  color:rgb(249, 212, 0);
+  font-family: Montserrat;
+  border-radius: 10px;
 }
 
+#formhab input[type=text] {
+  background-color: rgba(224, 232, 76, 0.749);
+}
+
+#formhab input[type=text]::placeholder{
+  color: rgb(87, 0, 0);
+}
+
+
 #addHabitBtn{
+  cursor: pointer;
  float: right;
   border: none;
+  
   color: rgb(254, 242, 0);
   padding-left: 10px;
   border-radius: 50%;
@@ -86,8 +103,16 @@ input[type=text] {
   width: max-content;
   height: max-content;
   padding: 12px 20px;
-
+  border-left: 2px solid rgb(251, 255, 0);
+  border-right: 2px solid rgb(252, 244, 0);
+  font-family: Montserrat;
+  font-weight: 600;
 }
+
+#addHabitBtn:hover {
+  background-color: rgb(0, 50, 11);
+}
+
 #formhab {
     margin-left: auto;
     margin-right: auto;
@@ -106,11 +131,14 @@ input[type=text] {
   .checkboxtask {
     position: relative;
     float: left;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
+    margin-left: 30px;
     margin-right: 20px;
     border-radius: 50%;
-    border: 3px solid #c9c9c9;
+    border-radius:35% 65% 25% 75% / 6% 100% 0% 94% ;
+    border: 5px solid #c9c9c95e;
+    background-color:rgba(13, 88, 7, 0.509);
     transition: all 0.25s cubic-bezier(0,0,0,1);
     cursor: pointer;
 
@@ -130,9 +158,13 @@ input[type=text] {
 
   }
 
+  .description{
+    color: rgb(255, 234, 0);
+  }
   main #logout-btn{
     border: none;
     color: rgb(66, 108, 0);
+    cursor: pointer;
   }
 
   #deleteaccountbtn{
@@ -250,3 +282,81 @@ input[type=text] {
     align-items: center;
     gap: 4px;
   }
+
+.delete-habit-btn {
+  position: absolute;
+  right: 3%;
+  background-color: rgb(249, 212, 0);
+  width: 32px;
+  height: 32px;
+  opacity: 1;
+  
+}
+
+.delete-habit-btn {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.5;
+  
+}
+.delete-habit-btn:hover {
+  opacity: 1;
+  
+}
+.delete-habit-btn:before, .delete-habit-btn:after {
+  position: absolute;
+  left: 11.3px;
+  content: ' ';
+  height: 20px;
+  width: 2px;
+  background-color: rgb(8, 165, 73);
+}
+.delete-habit-btn:before {
+  transform: rotate(45deg);
+}
+.delete-habit-btn:after {
+  transform: rotate(-45deg);
+}
+
+.streakLeaf{
+  color: rgb(255, 255, 0);
+  font-weight: 700;
+  border: 5px solid rgba(176, 176, 0, 0.534);
+  padding: 20px;
+  width: max-content;
+  border-radius:35% 65% 25% 75% / 6% 100% 0% 94% ;
+  background-color: #004810;
+  animation: shake 3s infinite cubic-bezier(.36,.07,.19,.97) both;
+}
+
+.streakLeafaf{
+  transition: 0.6s;
+  color: rgb(183, 4, 4);
+  font-weight: 900;
+  background-color: #480000;
+  border-color: rgba(179, 10, 10, 0.644);
+  box-shadow: 0 0 10px #f1d900;
+}
+
+
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}

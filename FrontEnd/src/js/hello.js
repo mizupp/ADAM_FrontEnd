@@ -52,4 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.assign(`newdashboard.html?account_id=${accountId}`);
   })
 
+  const calenderLink = document.getElementById("calender-link");
+  calenderLink.addEventListener("click", () => {
+    window.location.assign(`calender.html?account_id=${accountId}`);
+  })
+
 

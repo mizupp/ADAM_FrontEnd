@@ -190,14 +190,16 @@
   }
 
 
+
+
   .apples:nth-child(odd) {
     left: 100%;
-    background-color: rgb(179, 46, 23);
+    background-color: rgb(164, 19, 19);
     width: 40px;
     height: 38px;
     border-radius: 55% 57% 40% 42% / 64% 65% 70% 68%;
-    border-left: 3px solid rgb(180, 76, 57);
-    border-right: 1px solid rgb(122, 40, 26);
+    border-left: 3px solid rgb(47, 49, 49);
+    border-right: 1px solid rgb(248, 190, 0);
     transform-origin: 0% 100%;
     animation-name: apple-odd-grow;
     animation-duration: 4s;
@@ -206,12 +208,10 @@
 
   .apples:nth-child(even) {
     left: 100%;
-    background-color: rgb(224, 118, 4);
+    background-color: rgba(94, 162, 11, 0.995);
     width: 40px;
     height: 38px;
     border-radius: 55% 57% 40% 42% / 64% 65% 70% 68%;
-    border-left: 3px solid rgb(213, 85, 0);
-    border-right: 1px solid rgb(67, 26, 1);
     transform-origin: 0% 100%;
     animation-name: apple-even-grow;
     animation-duration: 4s;
@@ -235,3 +235,4 @@
       transform: rotate(-90deg) scale(1);
     }
   }
+

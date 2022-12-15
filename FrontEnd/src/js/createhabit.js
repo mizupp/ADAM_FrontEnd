@@ -4,7 +4,7 @@ document.getElementById("formhab").addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const form = new FormData(e.target);
-  console.log(form);
+  // console.log(form);
 
   const options = {
     method: "POST",

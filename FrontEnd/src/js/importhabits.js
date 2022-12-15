@@ -1,10 +1,4 @@
 // const { text } = require("express");
-Date.prototype.minusDays = function (days) {
-  var date = new Date(this.valueOf());
-  date.setDate(date.getDate() - days);
-  return date.getDate();
-};
-
 const container = document.querySelector("main");
 const search = document.querySelector(".search label");
 const expander = document.querySelector("main .menu .expander");
@@ -36,6 +30,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // console.log(habitData[0]);
     if (habitResponse.ok) {
       // createHabitCard();
+      
       for (let i = 0; i < habitData.length; i++) {
         // console.log(habitData[i])
         newCard(habitData[i]);
@@ -45,6 +40,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       // dummyData(habitData);
     } else {
     }
+    
   } catch (err) {
     console.log(err);
   }
@@ -79,17 +75,14 @@ const dummyData = (hb) => {
 };
 
 const newCard = (hb) => {
-  const tree = document.querySelectorAll(".branch");  const apple = document.createElement("div");
-  apple.classList.add("apples");
-  for (let i = 0; i < 10; i++) {
-    console.log("apple on the tree: works");
-    // tree.appendChild(apple);
-  }
-
-  console.log(hb);
-
-  // const col = document.createElement("div")
-  // col.classList.add("column");
+  // apple loading
+  const tree = document.querySelectorAll(".branch"); 
+  const leaves = document.querySelectorAll(".leaf");
+  const numLeaves = leaves.length;
+  const ranLeaf = Math.floor(Math.random() *(numLeaves))
+  const leaf = leaves[ranLeaf];
+  leaf.setAttribute("class", "apples");
+  // habit card loading
   const card = document.createElement("div");
   card.classList.add("card");
   const header = document.createElement("header");
@@ -97,11 +90,13 @@ const newCard = (hb) => {
   name.classList.add("title");
   name.textContent = hb.name;
   header.appendChild(name);
-
+  
   const streakLabel = document.createElement("p");
-  console.log(hb.date);
+  streakLabel.classList.add("streakLeaf");
+  
   if (hb.date) {
-    if (new Date(hb.date).getDate() < new Date().minusDays(1)) {
+    let yesterday = dayjs().subtract(1, "d");
+    if (dayjs(hb.date).isBefore(yesterday, "day")) {
       streakLabel.textContent = `Streak: ${0}`;
     } else {
       streakLabel.textContent = `Streak: ${hb.streak}`;
@@ -109,25 +104,17 @@ const newCard = (hb) => {
   } else {
     streakLabel.textContent = `Streak: ${0}`;
   }
-  // console.log(+number[0], hb.date);
-  // if (hb.date == +number[0]) {
-  //   console.log("yes");
-  // }
-  // streakLabel.textContent = `Streak: ${hb.streak}`;
-  // const streak = document.createElement("p");
-  // streak.textContent = hb.streak;
 
+// HERE /////////////////////////////////////
   const frequencyLabel = document.createElement("p");
-  frequencyLabel.textContent = `Frequency: ${hb.frequency} ${hb.units} per ${hb.time_period}`;
-  // const frequency = document.createElement("p");
-  // frequency.textContent = hb.frequency;
+  frequencyLabel.textContent = `Frequency: ${hb.frequency}
+                                 ${hb.units} per ${hb.time_period}`;
 
-  // Quantity not needed?
 
-  const quantityLabel = document.createElement("p");
-  quantityLabel.textContent = `Quantity: ${hb.quantity}`;
-  const quantity = document.createElement("p");
-  quantity.textContent = hb.quantity;
+  // const quantityLabel = document.createElement("p");
+  // quantityLabel.textContent = `Quantity: ${hb.quantity}`;
+  // const quantity = document.createElement("p");
+  // quantity.textContent = hb.quantity;
 
   const task = document.createElement("div");
   task.classList.add("task");
@@ -160,8 +147,9 @@ const newCard = (hb) => {
     };
     const response = await fetch(url, options);
     const updatedStreak = await response.json();
+    streakLabel.classList.add("streakLeafaf");
     streakLabel.textContent = `Streak: ${updatedStreak.streak}`;
-    console.log(updatedStreak._date, habitId);
+    // console.log(updatedStreak._date, habitId);
   });
 
   const description = document.createElement("description");
@@ -176,51 +164,21 @@ const newCard = (hb) => {
   // card.appendChild(streak);
   card.appendChild(frequencyLabel);
   // card.appendChild(frequency);
-  card.appendChild(quantityLabel);
+  // card.appendChild(quantityLabel);
   card.appendChild(task);
-  // card.appendChild(quantity);
-  // const textnode = document.createTextNode(`${hb.name}`);
-  // name.appendChild(textnode);
-  // col.appendChild(node);
-  // node.appendChild(name);
-  // const pquantity = document.createTextNode("Quantity")
-  // const pstreak = document.createTextNode("Streak");
-  // const pfreq= document.createTextNode("Frequency");
-  // const pstart = document.createTextNode("Start");
-  // const textnode2 = document.createTextNode(`${hb.streak}`);
-  // const textnode3 = document.createTextNode(`${hb.frequency}`);
-  // const textnode4 = document.createTextNode(`${hb.id}`);
-  // const textnode5 = document.createTextNode(`${hb.id}`);
-
-  // node.appendChild(pstreak);
-  // node.appendChild(textnode2);
-  // node.appendChild(pfreq);
-  // node.appendChild(textnode3);
-  // node.appendChild(pstart);
-  // node.appendChild(textnode4);
-  // node.appendChild(pquantity);
-  // node.appendChild(textnode5);
-  // // node.appendChild(textnode4);
-  
-  
-  
-  
   // Delete function and add delete button habi
   
   // Adding delete button to habit card
-  
-  const del = document.createElement("button");
+  const del = document.createElement("span");
+  del.classList.add("delete-habit-btn")
   function renderDelButton(hb) {
-    del.textContent = "Delete Habit";
+    // del.textContent = "\u00D7";
     del.onclick = () => deleteHabit(hb.id);
     card.appendChild(del);
   }
-  
   // Add event listener for when del button is presse
-  
-  async function deleteHabit(hbId) {
+  async function deleteHabit(habitId) {
     try {
-      const habitId = hbId;
       console.log(`habitId is: ${habitId}`)
 
       const options = { method: "DELETE",
@@ -230,6 +188,7 @@ const newCard = (hb) => {
       response = await fetch(`http://localhost:3000/habits/${habitId}`, options);
       
       if (response.status == 204) {
+        // card.remove();
         window.location.reload();
       } else {
         console.log("Habit could not be deleted");
@@ -244,4 +203,9 @@ const newCard = (hb) => {
   let column = document.getElementsByClassName("cardcolumn")[0];
   column.appendChild(card);
 };
+
+
+
+
+
 

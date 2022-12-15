@@ -73,7 +73,7 @@ class Habit {
         let test = await db.query(`SELECT * FROM habits WHERE habit_id = $1;`, [
           habit_id,
         ]);
-        console.log(_date, test.rows[0]._date);
+        console.log(_date, test.rows[0].streak);
         if (_date == test.rows[0]._date) {
           resolve(test.rows[0]);
         } else {
