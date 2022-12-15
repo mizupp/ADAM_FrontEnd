@@ -1,4 +1,10 @@
 // const { text } = require("express");
+Date.prototype.minusDays = function (days) {
+  var date = new Date(this.valueOf());
+  date.setDate(date.getDate() - days);
+  return date.getDate();
+};
+
 const container = document.querySelector("main");
 const search = document.querySelector(".search label");
 const expander = document.querySelector("main .menu .expander");
@@ -86,7 +92,6 @@ const newCard = (hb) => {
   // col.classList.add("column");
   const card = document.createElement("div");
   card.classList.add("card");
-
   const header = document.createElement("header");
   const name = document.createElement("a");
   name.classList.add("title");
@@ -94,7 +99,21 @@ const newCard = (hb) => {
   header.appendChild(name);
 
   const streakLabel = document.createElement("p");
-  streakLabel.textContent = `Streak: ${hb.streak}`;
+  console.log(hb.date);
+  if (hb.date) {
+    if (new Date(hb.date).getDate() < new Date().minusDays(1)) {
+      streakLabel.textContent = `Streak: ${0}`;
+    } else {
+      streakLabel.textContent = `Streak: ${hb.streak}`;
+    }
+  } else {
+    streakLabel.textContent = `Streak: ${0}`;
+  }
+  // console.log(+number[0], hb.date);
+  // if (hb.date == +number[0]) {
+  //   console.log("yes");
+  // }
+  // streakLabel.textContent = `Streak: ${hb.streak}`;
   // const streak = document.createElement("p");
   // streak.textContent = hb.streak;
 
@@ -136,12 +155,13 @@ const newCard = (hb) => {
         time_period: hb.time_period,
         streak: hb.streak,
         habit_id: hb.id,
+        _date: new Date().toDateString(),
       }),
     };
     const response = await fetch(url, options);
     const updatedStreak = await response.json();
     streakLabel.textContent = `Streak: ${updatedStreak.streak}`;
-    console.log(updatedStreak.streak);
+    console.log(updatedStreak._date, habitId);
   });
 
   const description = document.createElement("description");
