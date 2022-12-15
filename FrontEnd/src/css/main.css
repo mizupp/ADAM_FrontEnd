@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    border: 1px solid blue;
 }
 
 body{
@@ -10,6 +9,24 @@ body{
     transition: 0.8s;
     background-color: rgb(218, 218, 218);
     overflow: hidden;
+    background: linear-gradient(-45deg, #043122, #9d9999, #6da338, #fcc900);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
 }
 
 /* Header styling */
@@ -18,6 +35,7 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    
 }
 
 
@@ -65,6 +83,7 @@ header button:hover {
     top: 50vh;
     right: 50vw;
     flex-direction: column;
+
 }
 
 .log-buttons button{
@@ -77,8 +96,16 @@ header button:hover {
     height: 60px;
     min-width: 300px;
     border-radius: 30px;
+    animation: float 6s ease-in-out infinite;
+
 }
 
+
+#darkbutton{
+    position: absolute;
+    right: 5%;
+    top: 10%;
+}
 
 @media (max-width: 1250px) {
     header img {
@@ -108,15 +135,27 @@ header button:hover {
       rgb(127, 116, 34),
       rgb(43, 126, 40)
   ); */
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  position: absolute;
+  top: 0;
+  margin-top: 40vh;
+  left: 50%;
+  width:600px;
   height: auto;
-  grid-area: footer;
+  z-index: -1;
   
 }
 
+#loader2{
+
+  position: absolute;
+  top: 0;
+  margin-top: 40vh;
+  right: 50%;
+  width:600px;
+  height: auto;
+  
+  z-index: -1;
+}
 
 .svgcoolforu {
     /* height: 10%; */
@@ -127,13 +166,22 @@ header button:hover {
 
 
 .st0{
-    stroke: rgb(255, 255, 255);
+    stroke: rgb(165, 181, 151);
     stroke-width: 1px;
     fill: none;
     stroke-dasharray: 150, 200;
     stroke-dashoffset: 0;
-    animation: pulse 4s infinite linear;
-    
+    animation: pulse 8s infinite linear;
+    filter: blur(0.3px);
+}
+.st1{
+    stroke: rgb(9, 68, 17);
+    stroke-width: 1px;
+    fill: none;
+    stroke-dasharray: 150, 200;
+    stroke-dashoffset: 0;
+    animation: pulse 10s infinite linear;
+
 }
 
 @keyframes pulse {
@@ -143,4 +191,10 @@ header button:hover {
   100% {
     stroke-dashoffset: 1050;
   }
+}
+
+#mainlogoadam{
+    max-width:300px;
+    margin-bottom: 50px;
+    
 }

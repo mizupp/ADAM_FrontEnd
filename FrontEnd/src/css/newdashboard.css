@@ -230,10 +230,6 @@ main .menu:active .expander {
   transform: rotate(-180deg);
 }
 
-main #logout-btn{
-  border: none;
-  color: rgb(66, 108, 0);
-}
 
 main .topbar {
   position: fixed;
@@ -637,16 +633,7 @@ main .side .weather .meta .datetime .time {
   main .menu .avatar .thumb {
     max-width: 70px;
   }
-  main .thumb2 {
-    max-width: 80px;
-  }
-  #putcircle{
-    height: 50px;
-    width: 50px;
-    background-color: rgba(0, 0, 0, 0.39);
-    border-radius: 50%;
-    display: inline-block;
-  }
+
   main .topbar {
     position: absolute;
     width: calc(100% - 74px);
@@ -673,18 +660,18 @@ main .side .weather .meta .datetime .time {
     margin-top: 60px;
     border-top: unset;
     height: calc(100vh - (2 * var(--o-padding)) - 60px);
-    -ms-grid-columns: 1fr var(--o-padding) 1fr var(--o-padding) 1fr;
-    grid-template-columns: repeat(2, 1fr);
+    /* -ms-grid-columns: 1fr var(--o-padding) 1fr var(--o-padding) 1fr; */
+    grid-template-columns: repeat(1, 1fr);
   }
   main .side {
-    -webkit-box-ordinal-group: 1;
+    -webkit-box-ordinal-group: 0;
     -ms-flex-order: 0;
     order: 0;
     height: calc(100vh - (2 * var(--o-padding)) - 60px);
     border-top: unset;
     margin-top: 60px;
-    margin-left: auto;
-    /* display: flex; */
     border-radius: 0 0 var(--radius) 0;
+
+   
   }
 }

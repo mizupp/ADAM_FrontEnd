@@ -61,17 +61,13 @@ a {
         text-align: center;
     }
 }
-
+/* 
 #logoadam{
     position: absolute;
     left: 3%;
     top: 3%;
-}
-#darkbutton{
-    position: absolute;
-    right: 5%;
-    top: 10%;
-}
+} */
+
 
 #wrap{
     display: inline-block;
@@ -82,11 +78,11 @@ a {
 
 }
 
-#imgPreview{
+/* #imgPreview{
     border-radius: 60%;
     position: absolute;
     margin: 0;
     top: 5%;
     left: 70%;
 
-}
+} */

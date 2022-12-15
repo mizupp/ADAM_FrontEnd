@@ -233,3 +233,4 @@ const newCard = (hb) => {
     card.appendChild(del);
   }
 };
+
