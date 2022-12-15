@@ -3,6 +3,19 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+#headerimg{
+    right: 50%;
+    /* width: 45%; */
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#headerimg img{
+    right: 50%;
+    width:70px;
+    height: 70px;
+}
 /* Header styling */
 header {
     display: flex;

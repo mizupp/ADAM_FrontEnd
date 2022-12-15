@@ -11,7 +11,7 @@ window.addEventListener("load", async () => {
   console.log(data);
 
   if (response.status == 401) {
-    window.location.assign("login.html");
+    window.location.assign("newmain.html");
   }
 });
 
@@ -25,5 +25,5 @@ logOut.addEventListener("click", async () => {
   const data = await response.json();
   console.log(data);
   localStorage.clear();
-  window.location.assign("main.html");
+  window.location.assign("newmain.html");
 });

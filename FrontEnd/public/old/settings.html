@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- stylesheets -->
+<link rel="stylesheet" href="../src/css/login.css" />
+    <link rel="stylesheet" href="../src/css/road2.css" />
+    <link rel="stylesheet" href="../src/css/responsivedisplay.css" />
+    <link rel="stylesheet" href="../src/css/general.css" />
+    <link rel="stylesheet" href="../src/css/style2.css" />
+
+
+    <!-- lightmode/darkmode -->
+    <link rel="stylesheet" href="../src/css/lightmode.css" />
+    <!-- check it is main.css stylesheet -->
+    <link rel="stylesheet" href="../src/css/main.css" />
+    
+    <!-- scripts -->
+    <script defer src="../src/js/avatar.js"></script>
+    <script defer src="../src/js/lightmode.js"></script>
+
+    
+    <!-- external style sheets -->
+    <script src="https://kit.fontawesome.com/72cadd43e1.js" crossorigin="anonymous"></script>
+    <title>MainPage</title>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-buttons">
+            <a href="../public/habits.html"><img id="logoadam"  src="../src/img/logo.png"  alt="logo"/></a>
+            <div id="darkbutton">
+                <input type="checkbox" class="checkbox" id="chk" />
+                <label class="label" for="chk">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+            <button id="logout-btn" onclick="document.getElementById('logout').style.display='none'" style="width:auto;">Logout</button>
+        </div>
+
+    </header>
+
+
+
+    <!-- User Settings Change -->
+<div>
+    <p>Change your avatar:</p>
+    <input type="file" id="myFileInput">
+    <img width="150" id="imgPreview" src ="" alt="Preview">
+
+</div>
+
+<div>
+    <p>Delete your account</p>
+    <p>This will permentantly delete your account.</p>
+    <button>Delete</button>
+</div>
+    
+</body>
+</html>

@@ -48,7 +48,7 @@ function updateMain() {
 // DISPLAY DATA
 
 // Pass each habit to be crated as a habit card
-    async function loadHabits() {
+    function loadHabits() {
         habitData.forEach(h => {
             createHabit(h)
         })
@@ -115,3 +115,62 @@ function updateMain() {
 }
 
 // Add data to --myHeight variable from somewhere?
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    let username = document.querySelector(".insertName") 
+
+    async function updatePage() {
+        let session = localStorage.getItem('session');
+        let accountId = window.location.href.split("=")[1];
+  
+        const options = {
+            headers: {
+            Authorization: localStorage.getItem("session"),
+            },
+        };
+
+        // Fetching the userdata from the database
+        const response = await fetch(`http://localhost:3000/users/${accountId}`, options);
+        const userData = await response.json();
+        loadHabits(userData)
+        console.log(JSON.stringify(userData))
+
+        // Updating the name with username and redirecting to load habits
+        if (response.ok) {
+            loadHabits(userData)
+            username.textContent = `Hello ${userData.username}!`
+        } else {
+            username.textContent = "An error has occurred";
+        }
+    };
+
+        function loadHabits() {
+            habitData.forEach(h => {
+                createHabit(h)
+            });
+        
+            function createHabit() {
+                const habit = document.createElement('div')
+                habit.className = 'habit'
+        
+                const title = document.createElement('h1')
+                title.className = 'title'
+        
+                const content = document.createElement('h2')
+                content.className = 'content'
+        
+                title.textContent = `${userData.habit_name}`
+                content.textContent = `${userData.content}`
+        
+                habit.appendChild(title)
+                habit.appendChild(content)
+            }    
+        };
+    updatePage()
+});

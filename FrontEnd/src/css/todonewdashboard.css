@@ -1,0 +1,68 @@
+@media only screen and (min-width: 500px) {
+  body {
+    min-height: 100vh;
+  }
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.form__input {
+    box-sizing: border-box;
+    background-color: transparent;
+    padding: 0.7rem;
+    border-bottom-right-radius: 15px 3px;
+    border-bottom-left-radius:3px 15px;
+    border: solid 3px transparent;
+    border-bottom: dashed 3px #fff200;
+    font-size: 1rem;
+    color: hsla(260, 2%, 25%, 0.7);
+    width: 70%;
+    margin-bottom: 20px;
+  &:focus {
+    outline: none;
+    border: solid 3px #ea95e0;
+  }
+}
+@media only screen and (min-width: 500px) {
+ .form__input {
+    width: 60%;
+  }
+}
+
+.button {
+  padding: 0;
+  color: white;
+  border: none;
+  font-family: 'Montserrat', system-ui, sans-serif;
+  border-radius: 40%;
+  border-radius:35% 65% 25% 75% / 6% 100% 0% 94% ;
+  background-color: #f1ed00;
+  padding-bottom: 2px;
+  box-shadow: 0 2px 0 hsl(198, 1%, 29%);
+}
+.button span {
+  background-color: #005f23;
+  display: block;
+  padding: 8px 8px;
+  width: max-content;
+  border-radius:35% 65% 25% 75% / 6% 100% 0% 94% ;
+
+}
+
+.button:active, .button:focus {
+  padding-bottom: 0px;
+  outline: 0;
+}
+.toDoList {
+  text-align: left;
+  li {
+    position: relative;
+    padding: 0.5rem;
+  }
+  li:hover {
+    text-decoration: line-through wavy #24bffb;
+  }
+}
+

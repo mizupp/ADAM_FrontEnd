@@ -15,13 +15,13 @@
   #road {
     opacity:.9;
     width: 120vw;
-    /* width: 120vw; */
+    width: 120vw;
     height: 5vw;
     min-height:150px;
     /* border-radius: 50%/100px 100px 0 0; */
     /* border-radius: 50px 100px 0 0; */
-    background: rgb(0, 62, 34);
-    background: linear-gradient(#145e0ab1, #c5c505b2);
+    /* background: rgb(0, 62, 34); */
+    /* background: linear-gradient(#145e0ab1, #c5c505b2); */
     
     /* background-image: linear-gradient(
       rgba(0, 51, 7, 0.7) 0%,
@@ -75,7 +75,7 @@
         rgb(43, 126, 40)
     ); */
     position: fixed;
-    top: 50%;
+    top: 55%;
     bottom: 0;
     left: 0;
     width: 100%;
