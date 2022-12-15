@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         // console.log(habitData[i])
         newCard(habitData[i]);
       }
+      
       // habitData.forEach((habit) => newCard(habit));
       // newCard(habitData);
       // dummyData(habitData);
