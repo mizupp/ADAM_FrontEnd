@@ -45,23 +45,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.log(err);
   }
 
-  // function createHabitCard(habitData) {
-
-  //     const habit = document.createElement('div')
-  //     habit.className = 'card'
-
-  //     const title = document.createElement('h1')
-  //     title.className = 'title'
-
-  //     // const content = document.createElement('h2')
-  //     // content.className = 'content'
-
-  //     title.textContent = `${habitData.habit_name}`
-  //     // content.textContent = `${habitData.content}`
-
-  //     habit.appendChild(title)
-  //     habit.appendChild(content)
-  // }
 });
 
 const dummyData = (hb) => {
