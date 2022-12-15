@@ -39,7 +39,8 @@
     <!-- Header -->
     <header>
         <div class="header-buttons">
-            <a href="../public/index.html"><img id="logoadam"  src="../src/img/logo.png"  alt="logo"/></a>
+                <!-- SVG vector for heartbeat pulse mimic; uses road.css -->
+
             <div id="darkbutton">
                 <input type="checkbox" class="checkbox" id="chk" />
                 <label class="label" for="chk">
@@ -50,28 +51,41 @@
             </div>
         </div>   
     </header>
-    <!-- SVG vector for heartbeat pulse mimic; uses road.css -->
-    <div id="loader">
-        <svg id="svgcoolforu" x="0px" y="0px" viewBox="0 0 298 53.9">
-          <path class="st0" d="M297.5,41.2h-76.6c-0.5,0-0.9,0.4-1,0.8l-1.6,11.3l-3.1-32c0-0.5-0.4-0.9-0.9-0.9c-0.5,0-0.9,0.3-1,0.8
-                               l-5.3,25.5l-2.3-10.9c-0.1-0.4-0.4-0.7-0.9-0.8c-0.4,0-0.8,0.2-1,0.6l-2.3,4.8h-107c0,0,0,0,0,0H82c-1.6,0-2.2,1.1-2.2,1.6
-                               l-1.6,11.3l-3.1-52c0-0.5-0.4-0.9-0.9-0.9c-0.5,0-0.9,0.3-1,0.8l-9.3,45.5l-2.3-10.9c-0.1-0.4-0.4-0.7-0.9-0.8c-0.4,0-0.8,0.2-1,0.6
-                               l-2.3,4.8H0.5"/>
-        </svg>
-        </div> 
+
+
 
         <!-- sign in and register buttons -->
         <div class="log-buttons">
+            <a href="../public/about.html"><img id="mainlogoadam"  src="../src/img/logo1.png" alt="logo"/></a>
             <button onclick="document.getElementById('login').style.display='block'" style="width:auto;">Sign In</button>
             <button onclick="document.getElementById('register').style.display='block'" style="width:auto;">Register</button>
         </div>
     
+        <div id="loader">
+            <svg id="svgcoolforu" x="0px" y="0px" viewBox="0 0 298 53.9">
+              <path class="st0" d="M297.5,41.2h-76.6c-0.5,0-0.9,0.4-1,0.8l-1.6,11.3l-3.1-32c0-0.5-0.4-0.9-0.9-0.9c-0.5,0-0.9,0.3-1,0.8
+                                   l-5.3,25.5l-2.3-10.9c-0.1-0.4-0.4-0.7-0.9-0.8c-0.4,0-0.8,0.2-1,0.6l-2.3,4.8h-107c0,0,0,0,0,0H82c-1.6,0-2.2,1.1-2.2,1.6
+                                   l-1.6,11.3l-3.1-52c0-0.5-0.4-0.9-0.9-0.9c-0.5,0-0.9,0.3-1,0.8l-9.3,45.5l-2.3-10.9c-0.1-0.4-0.4-0.7-0.9-0.8c-0.4,0-0.8,0.2-1,0.6
+                                   l-2.3,4.8H0.5"/>
+            </svg>
+            </div> 
+            <div id="loader2">
+                <svg id="svgcoolforu" x="0px" y="0px" viewBox="0 0 298 53.9">
+                  <path class="st1" d="M297.5,41.2h-76.6c-0.5,0-0.9,0.4-1,0.8l-1.6,11.3l-3.1-32c0-0.5-0.4-0.9-0.9-0.9c-0.5,0-0.9,0.3-1,0.8
+                                       l-5.3,25.5l-2.3-10.9c-0.1-0.4-0.4-0.7-0.9-0.8c-0.4,0-0.8,0.2-1,0.6l-2.3,4.8h-107c0,0,0,0,0,0H82c-1.6,0-2.2,1.1-2.2,1.6
+                                       l-1.6,11.3l-3.1-52c0-0.5-0.4-0.9-0.9-0.9c-0.5,0-0.9,0.3-1,0.8l-9.3,45.5l-2.3-10.9c-0.1-0.4-0.4-0.7-0.9-0.8c-0.4,0-0.8,0.2-1,0.6
+                                       l-2.3,4.8H0.5"/>
+                </svg>
+                </div> 
+
         <div id="login" class="modal">
             <form action="" id="login-form" class="animate">
                 <div class="imgcontainer">
                     <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
-                    <img  id="avatar" onload="generateAvatar()"
-                    alt="Avatar" class="avatar">
+                    <!-- <img  id="avatar" onload="generateAvatar()"
+                    alt="Avatar" class="avatar"> -->
+                    <img src="../src/img/avatar.png"
+                alt="Avatar" class="avatar">
     
                 </div>
                 <div class="container">
@@ -111,7 +125,7 @@
         <form action="" id="register-form" class="animate">
             <div class="imgcontainer">
                 <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <img src="../src/img/avatar.png"
+                <img src="../src/img/avatar3.png"
                 alt="Avatar" class="avatar">
             </div>
             <div class="container">
