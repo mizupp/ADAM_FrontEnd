@@ -82,7 +82,7 @@
         <h1 id="welcomeUsername" class="current">Welcome Back, </h1>
         <span class="search">
           <label><span class="iconoir-search"></span></label>
-          <input class="bar" type="text" placeholder="Search..." />
+          <input class="bar" type="text" placeholder="Search for habit..." />
         </span>
         <span class="">
             <div class = "darkbuttontg" id="darkbutton">
@@ -96,7 +96,7 @@
         </span>
         
         <nav>
-          <a href="#" class="menu-item">ADAM</a>
+          <a href="about.html" class="menu-item">ADAM</a>
           <!-- added functionality  -->
           <button class="menu-item" id="logout-btn">Logout</button>
 
@@ -110,9 +110,10 @@
 
       <div class="dashboard">
         <div class="cardcolumn">
-          <div class="card">
-            <header>
-             <a class="title" href="#">Start creating habits on the right!</a>
+          <div class="card ">
+            <header class ="special">
+             <a class="title " href="#">Start creating habits on the right and watch your tree grow!</a>
+            
             </header>
           </div>
 
@@ -155,13 +156,13 @@
             <label for="frequency">Habit Frequency </label>
             <input type="text"  id="frequency" name="frequency" placeholder="How many times a day?" required>
            
-            <!-- This input is not in database -->
-            <label for="units">Choose quantity (optional):</label>
-            <input type="text"  id="units" name="units" placeholder="E.g. glasses, hours, kilometers" required>
+           
+            <label for="units">Description (optional units):</label>
+            <input type="text"  id="units" name="units" placeholder="Tell us about your habit" required>
       
-            <!-- This input is not in database -->
-            <label for="time">Time Period</label>
-            <input type="text"  id="time" name="time" placeholder="E.g. days, weeks" required>
+           
+            <label for="time">Time (Day/Week/Month)</label>
+            <input type="text"  id="time" name="time" placeholder="Per..." required>
                   
             <input type="submit" name="button" id="addHabitBtn" value="Add Habit">
           </form>

@@ -90,14 +90,17 @@ const newCard = (hb) => {
 
 // HERE /////////////////////////////////////
   const frequencyLabel = document.createElement("p");
-  frequencyLabel.textContent = `Goal: ${hb.frequency}
-                                 ${hb.units} per ${hb.time_period}`;
+  // frequencyLabel.textContent = `Goal: ${hb.frequency}
+  //                                ${hb.units} per ${hb.time_period}`;
 
-
-  // const quantityLabel = document.createElement("p");
-  // quantityLabel.textContent = `Quantity: ${hb.quantity}`;
-  // const quantity = document.createElement("p");
-  // quantity.textContent = hb.quantity;
+  const quantity = document.createElement("p");
+  const goalTime = document.createElement("p");
+  frequencyLabel.textContent = `My Goal is to complete this task ${hb.frequency} times today so it can become a habit.`;
+  quantity.textContent =` Extra Description: ${hb.units}`;
+  goalTime.textContent =`My Goal time period was per ${hb.time_period}; I can do it!`
+  frequencyLabel.classList.add("freqL");
+  quantity.classList.add("qua");
+  goalTime.classList.add("goalt");
 
   const task = document.createElement("div");
   task.classList.add("task");
@@ -144,10 +147,13 @@ const newCard = (hb) => {
 
   card.appendChild(header);
   card.appendChild(streakLabel);
+
   // card.appendChild(streak);
   card.appendChild(frequencyLabel);
+  
   // card.appendChild(frequency);
-  // card.appendChild(quantityLabel);
+  card.appendChild(quantity);
+  card.appendChild(goalTime);
   card.appendChild(task);
   // Delete function and add delete button habi
   

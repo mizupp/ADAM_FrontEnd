@@ -71,12 +71,13 @@
 }
 
 
+
 input[type=text] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
-  color:rgb(249, 212, 0);
+  color:rgb(39, 39, 39);
   font-family: Montserrat;
   border-radius: 10px;
 }
@@ -107,6 +108,7 @@ input[type=text] {
   border-right: 2px solid rgb(252, 244, 0);
   font-family: Montserrat;
   font-weight: 600;
+  
 }
 
 #addHabitBtn:hover {
@@ -118,6 +120,7 @@ input[type=text] {
     margin-right: auto;
     position: relative;
     align-items: center;
+    
     /* box-sizing: border-box; */
   }
 
@@ -139,8 +142,10 @@ input[type=text] {
     border-radius:35% 65% 25% 75% / 6% 100% 0% 94% ;
     border: 5px solid #c9c9c95e;
     background-color:rgba(13, 88, 7, 0.509);
+    
     transition: all 0.25s cubic-bezier(0,0,0,1);
     cursor: pointer;
+    
 
     &.checked {
       background-color: #77DDA8;
@@ -289,6 +294,7 @@ input[type=text] {
   background-color: rgb(249, 212, 0);
   width: 32px;
   height: 32px;
+  
   opacity: 1;
   
 }
@@ -301,6 +307,7 @@ input[type=text] {
   height: 32px;
   opacity: 0.5;
   
+  
 }
 .delete-habit-btn:hover {
   opacity: 1;
@@ -312,6 +319,7 @@ input[type=text] {
   content: ' ';
   height: 20px;
   width: 2px;
+  
   background-color: rgb(8, 165, 73);
 }
 .delete-habit-btn:before {
@@ -322,6 +330,7 @@ input[type=text] {
 }
 
 .streakLeaf{
+  margin: 5px auto 5px;
   color: rgb(255, 255, 0);
   font-weight: 700;
   border: 5px solid rgba(176, 176, 0, 0.534);
@@ -334,14 +343,81 @@ input[type=text] {
 
 .streakLeafaf{
   transition: 0.6s;
-  color: rgb(183, 4, 4);
+  color: rgb(219, 199, 199);
   font-weight: 900;
   background-color: #480000;
   border-color: rgba(179, 10, 10, 0.644);
   box-shadow: 0 0 10px #f1d900;
+  
 }
 
 
+
+
+.task{
+  background-color:rgba(237, 224, 224, 0.299);
+  border-radius: 10px;
+  line-height: 28px;
+}
+
+.special{
+  color: rgba(241, 241, 81, 0.733);
+  
+}
+input[type="file"]::file-selector-button{ 
+  background: #e9ed1b;
+  border: 2px solid #dfed1b9d;
+  border-radius: 4px;
+  color: rgb(69, 67, 67);
+  cursor: pointer;
+  font-size: 12px;
+  outline: none;
+  padding: 10px 25px;
+  text-transform: uppercase;
+  transition: all 1s ease;
+  font-weight: 600;
+  font-family: Montserrat;
+}
+input[type='file'] {
+  color: rgb(23, 98, 0);
+  font-family: Montserrat;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgba(231, 231, 231, 0.256);
+ 
+}
+.freqL{
+  background-color: rgba(152, 136, 8, 0.274);
+  background-color: rgba(20, 20, 20, 0.119);
+
+  /* background: linear-gradient(
+    to right,
+    rgba(13, 126, 9, 0.429),
+    rgba(241, 220, 59, 0.445)
+); */
+  margin: 10px auto 10px;
+	padding:6px 6px 6px 6px;
+	border-radius:10px;
+  font-size: 18px;
+  font-weight: bold;
+  /* padding: 0; */
+  animation: shake 3s 2 cubic-bezier(.36,.07,.19,.97) both;
+
+}
+.qua{
+
+  font-size: 17px;
+  font-style: italic;
+  padding: 0;
+  margin:0;
+}
+.goalt{
+  font-size: 17px;
+  /* background-color: rgb(132, 139, 104); */
+}
 
 @keyframes shake {
   10%, 90% {
