@@ -1,11 +1,12 @@
 const db = require("../database/connect");
 
 class Date {
-    constructor({date_id, account_id, habits, date}){
+    constructor({date_id, account_id, habits, date, calender}){
         this.id = date_id;
         this.account_id = account_id;
         this.habits = habits;
         this.date = date;
+
     }
 
     static async getAll() {

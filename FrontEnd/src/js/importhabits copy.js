@@ -30,12 +30,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     // console.log(habitData[0]);
     if (habitResponse.ok) {
       // createHabitCard();
-   
-      calenderStuff(habitData);
+      
       for (let i = 0; i < habitData.length; i++) {
         // console.log(habitData[i])
         newCard(habitData[i]);
-      
       }
       // habitData.forEach((habit) => newCard(habit));
       // newCard(habitData);
@@ -46,7 +44,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   } catch (err) {
     console.log(err);
   }
-  
+
 });
 
 const dummyData = (hb) => {
@@ -188,17 +186,7 @@ const newCard = (hb) => {
   renderDelButton(hb);
   let column = document.getElementsByClassName("cardcolumn")[0];
   column.appendChild(card);
-
-
-  
-
 };
-
-
-
-
-
-
 
 
 

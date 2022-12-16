@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="../src/css/todonewdashboard.css" />
+    <link rel="stylesheet" href="../src/css/newdashboard.css" />
+    <link rel="stylesheet" href="../src/css/tree.css" />
+    <link rel="stylesheet" href="../src/css/lightmode.css" />
+
+    <!-- js scripts -->
+    <script defer src="../src/js/importhabits.js"></script>
+    <script defer src="../src/js/calender2.js"></script>
+
+    <!-- <script defer src="../src/js/newdashboard.js"></script> -->
+    <script defer src="../src/js/lightmode.js"></script>
+    <script defer src="../src/js/logout.js"></script>
+    <script defer src="../src/js/createhabit.js"></script>
+    <!-- note: removed avatar -->
+    <!-- <script defer src="../src/js/avatar.js"></script> -->
+    <script defer src="../src/js/todo.js"></script>
+    <script defer src="../src/js/logoDirectory.js"></script>
+  
+    <script defer src="../src/js/hello.js"></script>
+
+    <!-- external sheets -->
+    <script defer src="https://kit.fontawesome.com/72cadd43e1.js" crossorigin="anonymous"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.2.0/main.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.2.0/main.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@fullcalendar/interaction@4.2.0/main.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.2.0/main.min.css" rel="stylesheet"/>
+    <title>ADAM DASHBOARD</title>
+</head>
+<body>
+    <!-- menu bar with container for user avatar -->
+    <main class="container">
+
+      <div class="menu">
+        <div class="avatar">
+            <div id="putcircle"><img id="logoadam" class="thumb2" src="../src/img/logo.png" width="50" alt="logo"/></div>
+            <!-- change src to session stored data url -->
+        </div>
+        <div class="avatar">
+          <img id="imgPreview"
+            class="thumb"
+            src=""
+            width="60"
+            alt="Preview"
+          />
+          <!-- <img id="imgPreview" src ="" alt="Preview"> -->
+            <!-- user name text box change -->
+          <span id="showUsername" class="name">userNametext</span>
+        </div>
+
+        <!-- links -->
+        <nav class="primary">
+          <a id="newdashboard-link" class="menu-item active">
+            <span class="iconoir-report-columns"></span>
+            <span class="desc">Dashboard</span>
+          </a>
+          <!-- This page is no longer needed -->
+          <!-- <a id="habit-stat-link" class="menu-item ">
+            <span class="iconoir-google-docs"></span>
+            <span class="desc">Habit Stats</span>
+          </a> -->
+          <a id="setting-link" class="menu-item">
+            <span class="iconoir-settings"></span>
+            <span class="desc">Settings</span>
+          </a>
+          <a id="calender-link" class="menu-item">
+            <span class="iconoir-settings"></span>
+            <span class="desc">Calender</span>
+          </a>
+        </nav>
+        <span class="expander iconoir-arrow-right"></span>
+      </div>
+     <!-- end of side bar menu -->
+    
+    <!-- top of navigation menu -->
+      <div class="topbar">
+        
+        <h1 id="welcomeUsername" class="current">Welcome Back, </h1>
+        <span class="search">
+          <label><span class="iconoir-search"></span></label>
+          <input class="bar" type="text" placeholder="Search..." />
+        </span>
+        <span class="">
+            <div class = "darkbuttontg" id="darkbutton">
+                <input type="checkbox" class="checkbox" id="chk" />
+                <label class="label" for="chk">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+        </span>
+        
+        <nav>
+          <a href="#" class="menu-item">ADAM</a>
+          <!-- added functionality  -->
+          <button class="menu-item" id="logout-btn">Logout</button>
+
+          <!-- <a id="logout-btn" class="menu-item">Log out</a> -->
+        </nav>
+      </div>
+      <!-- end of top and entire navigation menu -->
+
+
+      <!-- dashboard -->
+
+      <div class="dashboard">
+        <div class="cardcolumn">
+          <div class="card">
+            <header>
+             <div id="calendar"></div>
+            </header>
+          </div>
+
+
+           <!-- <div class="card">
+            <header>
+             <a class="title" href="#">Name</a>
+              <span class="iconoir-more-vert"></span>
+            </header>
+              <p>Streak:</p><div class="streak" href="#"></div>
+              <p>Frequency: </p><div class="frequency" href="#"></div>
+              <p>Start Date: </p><div class="startDate" href="#"></div>
+              <p>Quantity: </p><div class="quantity" href="#"></div>
+              <div class="task">
+                <div class="checkboxtask"></div>
+                <div class="description">I completed the task.</div>
+              </div>
+              <div class="meta">
+              <span class="iconoir-pin"></span>
+              <span class="iconoir-eye-off"></span>
+              <span class="iconoir-share-ios"></span>
+            </div>
+          </div> -->
+          
+        </div>
+
+
+
+        <!-- end of dashboard -->
+      </div> 
+
+      <!-- side column bar -->
+      <div class="side">
+        <div class="card weather">
+<          <!-- add a habit -->
+          <form id="formhab">
+            <label for="habit">Add Habit: </label>
+            <input type="text"  id="habit" name="habit" placeholder="Your habit..." required>
+      
+            <label for="frequency">Habit Frequency </label>
+            <input type="text"  id="frequency" name="frequency" placeholder="How many times a day?" required>
+           
+            <!-- This input is not in database -->
+            <label for="units">Choose quantity (optional):</label>
+            <input type="text"  id="units" name="units" placeholder="E.g. glasses, hours, kilometers" required>
+      
+            <!-- This input is not in database -->
+            <label for="time">Time Period</label>
+            <input type="text"  id="time" name="time" placeholder="E.g. days, weeks" required>
+                  
+            <input type="submit" name="button" id="addHabitBtn" value="Add Habit">
+          </form>>
+          </div>
+          
+        <div class="card weather">
+        <!-- tree -->
+            <div class="canvas">
+            <div class="tree">
+              <div class="trunk">
+                <div class="branch" id="1">
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                </div>
+                <div class="branch" id="2">
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                </div>
+                <div class="branch" id="3">
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                </div>
+                <div class="branch" id="4">
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                </div>
+                <div class="branch" id="5">
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                </div>
+                <div class="branch" id="6">
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                </div>
+                <div class="branch" id="7">
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                  <div class="leaf"></div>
+                </div>
+                <div class="branch" id="8">
+                  <div class="leaf"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="card">
+
+          <header>Notes</header>
+
+          <div class="content">
+            <!-- to do list -->
+
+            <form class="form">
+              <div>
+                <label class="form__label" for="todo">~ Today I need to ~</label>
+                <input class="form__input"
+                     type="text" 
+                     id="todo" 
+                     name="to-do"
+                     size="30"
+                     required>
+                <button class="button"><span>Submit</span></button>
+              </div>
+            </form>
+
+            <div>
+              <ul class="toDoList">
+              </ul>
+            </div>
+            <!-- end of to do list -->
+            <ul>
+              <li>Mediate on the beach</li>
+              <li>Take the trash out</li>
+              <li>Eat an apple</li>
+              <li>Drink water</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.7/dayjs.min.js"></script>
+  <script>
+    dayjs().format();
+  </script>
+</html>

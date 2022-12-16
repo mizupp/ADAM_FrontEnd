@@ -5,7 +5,7 @@ logform.addEventListener("submit", async (e) => {
   const username = document.getElementById("logusername").value;
   const password = document.getElementById("logpassword").value;
   console.log("LoginFunctionRuns");
-  const url = `https://adam-backend.onrender.com/users/login`;
+  const url = `http://localhost:3000/users/login`;
 
   const options = {
     method: "POST",

@@ -1,4 +1,4 @@
-const url = "https://adam-backend.onrender.com";
+const url = "http://localhost:3000";
 
 document.addEventListener("DOMContentLoaded", async () => {
     const options = {

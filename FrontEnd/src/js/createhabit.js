@@ -19,11 +19,12 @@ document.getElementById("formhab").addEventListener("submit", async (e) => {
       time_period: form.get("time"),
       streak: 0,
       _date: "",
+      calender: "",
       // The other inputs are not in the database
     }),
   };
 
-  const result = await fetch(`https://adam-backend.onrender.com/habits`, options);
+  const result = await fetch(`http://localhost:3000/habits`, options);
   console.log(result);
   if (result.status == 201) {
     window.location.reload();

@@ -20,6 +20,7 @@ CREATE TABLE habits (
     time_period varchar(20),
     streak INT NOT NULL,
     _date varchar,
+    calender varchar,
     FOREIGN KEY (account_id) REFERENCES accounts(account_id)
 );
 

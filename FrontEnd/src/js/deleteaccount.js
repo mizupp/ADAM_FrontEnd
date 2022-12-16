@@ -12,7 +12,7 @@ delBtn.addEventListener("click", async () => {
                 Authorization: localStorage.getItem("session")
             }
         };
-        const response = await fetch(`https://adam-backend.onrender.com/users/${accountId}`, delOptions);
+        const response = await fetch(`http://localhost:3000/users/${accountId}`, delOptions);
         window.location.assign("newmain.html");
         }
         else{}

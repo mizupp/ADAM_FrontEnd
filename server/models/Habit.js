@@ -10,6 +10,7 @@ class Habit {
     time_period,
     streak,
     _date,
+    calender,
   }) {
     this.id = habit_id;
     this.account_id = account_id;
@@ -19,6 +20,7 @@ class Habit {
     this.time_period = time_period;
     this.streak = streak;
     this.date = _date;
+    this.calender = calender;
   }
 
   static async getAll() {
@@ -46,11 +48,12 @@ class Habit {
       time_period,
       streak,
       _date,
+      calender,
     } = data;
     let response = await db.query(
-      `INSERT INTO habits (account_id, habit_name, units, frequency, time_period, streak, _date) 
-        VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING habit_id;`,
-      [account_id, habit_name, units, frequency, time_period, streak, _date]
+      `INSERT INTO habits (account_id, habit_name, units, frequency, time_period, streak, _date, calender) 
+        VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING habit_id;`,
+      [account_id, habit_name, units, frequency, time_period, streak, _date, calender]
     );
     const newId = response.rows[0].habit_id;
     const newHabit = await Habit.getOneById(newId);
@@ -67,7 +70,8 @@ class Habit {
           units,
           time_period,
           streak,
-          _date,
+          _date, 
+          calender,
           habit_id,
         } = data;
         let test = await db.query(`SELECT * FROM habits WHERE habit_id = $1;`, [
@@ -78,7 +82,7 @@ class Habit {
           resolve(test.rows[0]);
         } else {
           let result = await db.query(
-            `UPDATE habits SET account_id = $1, habit_name = $2, units = $3, frequency = $4, time_period = $5, streak = $6, _date = $7 WHERE habit_id = $8 RETURNING *;`,
+            `UPDATE habits SET account_id = $1, habit_name = $2, units = $3, frequency = $4, time_period = $5, streak = $6, _date = $7, calender = $8 WHERE habit_id = $9 RETURNING *;`,
             [
               account_id,
               habit_name,
@@ -87,6 +91,7 @@ class Habit {
               time_period,
               streak,
               _date,
+              calender,
               habit_id,
             ]
           );

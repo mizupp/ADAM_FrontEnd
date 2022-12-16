@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
           Authorization: localStorage.getItem("session"),
         },
       };
-      const response = await fetch(`https://adam-backend.onrender.com/users/${accountId}`, options);
+      const response = await fetch(`http://localhost:3000/users/${accountId}`, options);
       const userData = await response.json();
       // console.log(userData);
       // console.log(userData.username);
